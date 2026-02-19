@@ -1,1 +1,251 @@
+:root{
+    --font: 'Poppins', sans-serif;
+}
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  background: linear-gradient(180deg, #111A2C 21.63%, #69C2E8 68.27%);
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+
+  position: relative;  
+  min-height: 100vh;   
+  isolation: isolate;   
+}
+
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+
+body::after{
+  content: "";
+  position: fixed;
+  inset: -60px;       
+  z-index: -1;
+  pointer-events: none;
+
+}
+
+
+.site-header{
+  position: sticky;   
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  z-index: 1000;
+
+  margin: 0;
+  padding: 0;
+    background: transparent;
+}
+
+.logo{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 50%;
+}
+
+
+
+.site-header::after{
+  content: "";
+  display: block;
+  height: 18px;
+  pointer-events: none;
+
+}
+
+/* Container + nav alignment */
+.container.nav{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: flex-end; /* pushes links to the right */
+}
+
+.links{
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Link styling */
+.links a{
+  position: relative;
+  text-decoration: none;
+
+  color: rgba(255,255,255,0.92);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  padding: 10px 2px;
+}
+
+/* Underline "bar" animation */
+.links a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+
+  height: 2px;
+  width: 100%;
+
+  background: rgba(255,255,255,0.95);
+  border-radius: 1px;
+
+  /* start hidden and slid slightly right */
+  transform: translateX(10px) scaleX(0);
+  transform-origin: right;
+  opacity: 0;
+
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.links a:hover::after,
+.links a:focus-visible::after{
+  /* animate in from right to left */
+  transform: translateX(0) scaleX(1);
+  opacity: 1;
+}
+
+.links a:hover{
+  color: #fff;
+}
+
+
+.links a.active::after{
+  transform: translateX(0) scaleX(1);
+  opacity: 1;
+}
+
+
+.moon{
+    position: absolute;
+    top: 0%;
+    width: 889px;
+    height: 915px;
+    left: 9%;
+    animation: moon 360s infinite linear;
+    z-index: -1;
+    opacity: 0.55;
+}
+
+@keyframes moon{
+    0%{
+        transform: translate(-50%,0) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,0) rotate(360deg);
+    }
+}
+
+.grains{
+  position: fixed;
+  inset: 0;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 0;
+  opacity: 0.9;
+}
+
+/* Join us Buttom */
+.join-us{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 26px;
+  border-radius: 999px;
+  left: 42%;
+  top: 600px;
+
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+
+  background: #979AAF;
+  border: 1px solid #979AAF;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+
+  transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
+}
+
+.join-us:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.28);
+}
+
+/* Diagonal slash shine layer */
+.join-us::before{
+  content: "";
+  position: absolute;
+  inset: -60% -40%;
+  pointer-events: none;
+
+  background:
+    linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.35) 50%, transparent 60%),
+    linear-gradient(115deg, transparent 46%, rgba(255,255,255,0.18) 52%, transparent 58%),
+    linear-gradient(115deg, transparent 52%, rgba(255,255,255,0.10) 56%, transparent 60%);
+
+  transform: translateX(-70%);
+  opacity: 0;
+}
+
+.join-us:hover::before{
+  opacity: 1;
+  animation: shineSweep 900ms ease forwards;
+}
+
+@keyframes shineSweep{
+  from{ transform: translateX(-70%); }
+  to{ transform: translateX(70%); }
+}
+
+.join-us::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: radial-gradient(120px 60px at 30% 30%, rgba(103,190,227,0.22), transparent 60%);
+  opacity: 0.9;
+}

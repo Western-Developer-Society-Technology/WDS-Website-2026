@@ -17,13 +17,13 @@ html, body{
 }
 
 body{
-  background: linear-gradient(180deg, #111A2C 21.63%, #69C2E8 68.27%);
+  background: linear-gradient(180deg, #111A2C 90%, #69C2E8 100%);
   background-repeat: no-repeat;
   overflow-x: hidden;
 
-  position: relative;  
+  position: fixed;   
   min-height: 100vh;   
-  isolation: isolate;   
+  isolation: isolate;  
 }
 
 body::before{
@@ -39,15 +39,16 @@ body::before{
 body::after{
   content: "";
   position: fixed;
-  inset: -60px;       
+  inset: -60px;         
   z-index: -1;
   pointer-events: none;
 
 }
 
+/* ================================================================================================ HERO + NAV - By Reich Kiambati ====================================================================================================== */
 
 .site-header{
-  position: sticky;   
+  position: sticky;   /* not sticky */
   top: 0;
   left: 0;
   right: 0;
@@ -69,6 +70,152 @@ body::after{
     height: 50%;
 }
 
+.menu-btn{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hide hamburger on non-phones */
+.menu-icon{
+  display: none;
+}
+
+/* Normal desktop links row stays visible */
+.container.nav{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.links{
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+/* ========================================== Hamburger Dropdown Phone layout ================================== */
+@media (max-width: 767px){
+  /* Show hamburger only on phones */
+  .menu-icon{
+    display: inline-flex;
+
+    position: absolute;
+    top: 14px;
+    right: 16px;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    user-select: none;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .menu-icon .navicon{
+    position: relative;
+    width: 18px;
+    height: 2px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 999px;
+  }
+
+  .menu-icon .navicon::before,
+  .menu-icon .navicon::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 999px;
+    transition: transform 180ms ease, top 180ms ease;
+  }
+
+  .menu-icon .navicon::before{ top: -6px; }
+  .menu-icon .navicon::after{ top: 6px; }
+
+  /* Turn hamburger into X when open */
+  .menu-btn:checked + .menu-icon .navicon{
+    background: transparent;
+  }
+  .menu-btn:checked + .menu-icon .navicon::before{
+    top: 0;
+    transform: rotate(45deg);
+  }
+  .menu-btn:checked + .menu-icon .navicon::after{
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* ========================================== Mobile dropdown panel =====================================*/
+  .container.nav{
+    padding: 0;
+    justify-content: flex-end;
+  }
+
+  .links{
+    position: absolute;
+    top: 64px; 
+    right: 16px;
+    left: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    padding: 16px 16px;
+    border-radius: 16px;
+
+    background: rgba(10, 16, 28, 0.55);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    /* hidden by default */
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  /* Show menu when checkbox checked */
+  .menu-btn:checked ~ .container.nav .links{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .links a{
+    color: rgba(255,255,255,0.92);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 13px;
+
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+
+  .links a:hover{
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+  }
+}
 
 
 .site-header::after{
@@ -88,6 +235,7 @@ body::after{
   justify-content: flex-end; /* pushes links to the right */
 }
 
+/* Your nav row */
 .links{
   display: flex;
   gap: 32px;
@@ -108,7 +256,7 @@ body::after{
   padding: 10px 2px;
 }
 
-/* Underline "bar" animation */
+/* Underline animation */
 .links a::after{
   content: "";
   position: absolute;
@@ -121,7 +269,7 @@ body::after{
   background: rgba(255,255,255,0.95);
   border-radius: 1px;
 
-  /* start hidden and slid slightly right */
+  /* start hidden and slid right */
   transform: translateX(10px) scaleX(0);
   transform-origin: right;
   opacity: 0;
@@ -170,6 +318,7 @@ body::after{
 .grains{
   position: fixed;
   inset: 0;
+  width: 100vw;
 
   object-fit: cover;
   object-position: center;
@@ -178,7 +327,7 @@ body::after{
   opacity: 0.9;
 }
 
-/* Join us Buttom */
+/* ============================================== Join us Button ===========================================*/
 .join-us{
   position: relative;
   display: inline-flex;
@@ -201,7 +350,7 @@ body::after{
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
-  overflow: hidden;
+  overflow: hidden; /* keeps shine inside */
   box-shadow: 0 10px 35px rgba(0,0,0,0.25);
 
   transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
@@ -239,6 +388,7 @@ body::after{
   to{ transform: translateX(70%); }
 }
 
+/* Optional subtle inner glow */
 .join-us::after{
   content: "";
   position: absolute;
@@ -248,4 +398,265 @@ body::after{
 
   background: radial-gradient(120px 60px at 30% 30%, rgba(103,190,227,0.22), transparent 60%);
   opacity: 0.9;
+}
+
+
+
+/* =================================== SHOOTING STAR ANIMATION ======================================*/
+.star{
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #fff;
+
+  position: absolute;        
+  transform-origin: 100% 0;
+  opacity: 0;
+
+  /* 10s loop, but flight happens only at the start */
+  animation: star-ani 10s infinite ease-out;
+}
+
+.star::after{
+  content:'';
+  position:absolute;
+  top: 0px;
+  left: 4px;
+
+  border: 2px solid #F00;
+  border-width: 2px 150px 2px 150px;
+  border-color: transparent transparent transparent #fff;
+
+  transform: rotate(-45deg) translate3d(1px, -1px, 0);
+  transform-origin: 0% 100%;
+
+  animation: shooting-ani 10s infinite ease-out;
+}
+
+
+.star{
+  display:block;
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:#FFF;
+
+  position:absolute;
+  transform-origin:100% 0;
+  opacity:0;
+
+  animation: star-ani 10s infinite ease-out;
+}
+
+.star::after{
+  content:'';
+  position:absolute;
+  top:0px;
+  left:4px;
+
+  border:2px solid #F00;
+  border-width:2px 150px 2px 150px;
+  border-color:transparent transparent transparent #FFF;
+
+  transform:rotate(-45deg) translate3d(1px, -1px, 0);
+  transform-origin:0% 100%;
+
+  animation: shooting-ani 10s infinite ease-out;
+}
+
+/*alternating delays */
+.star1{ top:150px; left:900px; animation-delay:0s; }
+.star1::after{ animation-delay:0s; }
+
+.star2{ top:320px; left:980px; animation-delay:5s; }
+.star2::after{ animation-delay:5s; }
+
+@keyframes star-ani{
+  0%{
+    opacity:0;
+    transform:scale(0) rotate(0) translate3d(0, 0, 0);
+  }
+  1%{
+    opacity:1;
+    transform:scale(1) rotate(0) translate3d(0, 0, 0);
+  }
+  4%{
+    opacity:1;
+    transform:scale(1) rotate(0) translate3d(-200px, 200px, 0);
+  }
+  9%{
+    opacity:0; /* fade out BEFORE the end */
+    transform:scale(1) rotate(0) translate3d(-280px, 280px, 0);
+  }
+  10%{
+    opacity:0;
+    transform:scale(1) rotate(0) translate3d(-300px, 300px, 0);
+  }
+  100%{
+    opacity:0;
+    transform:scale(1) rotate(0) translate3d(-300px, 300px, 0);
+  }
+}
+
+@keyframes shooting-ani{
+  0%{
+    opacity:0;
+    transform:rotate(-45deg) translate3d(1px,-1px,0) scale(1);
+  }
+  1%{ opacity:1; }
+  5%{
+    opacity:1;
+    transform:scale(1) rotate(-45deg) translate(0px, 0px);
+  }
+  9%{
+    opacity:0; /* fade out BEFORE the end */
+    transform:scale(0.6) rotate(-45deg) translate(0px, -0.8px);
+  }
+  10%{
+    opacity:0;
+    transform:scale(0.5) rotate(-45deg) translate(0px, -1px);
+  }
+  100%{
+    opacity:0;
+    transform:scale(0.5) rotate(-45deg) translate(0px, -1px);
+  }
+}
+
+/*========================================= Optimizing for different screen sizes ==========================================*/
+
+/* IPhone 14 pro Max for reference */
+@media (max-width: 480px){
+  .logo{
+    width: 95%;
+    height: auto;
+  }
+
+  .moon{
+    width: 600px;
+    height: 600px;
+    left: 5%;
+    top: -120px;
+    opacity: 0.5;
+  }
+
+  .join-us{
+    left: 30%;
+    top: 570px;
+  }
+
+  .star1{
+    top: 200px;
+    left: 500px;
+  }
+  .star2{
+    top: 450px;
+    left: 400px;
+  }
+
+  .grains{
+    opacity: 1;
+  }
+}
+
+/*IPhone 12 Profor reference*/
+
+@media (max-width: 400px){
+  .join-us{
+    top: 520px;
+  }
+}
+
+/*IPhone XR for reference*/
+
+@media (max-width: 415px){
+  .join-us{
+    top: 540px;
+  }
+}
+
+/* IPhone SE for reference */
+
+@media (max-width: 380px){
+  .moon{
+    width: 500px;
+    height: 500px;
+    left: 0%;
+    top: -150px;
+    opacity: 0.45;
+  }
+  .logo{
+    top: 45%;
+  }
+  .join-us{
+    top: 440px;
+  }
+
+  .star1{
+    top: 150px;
+    left: 300px;
+  }
+  .star2{
+    top: 350px;
+    left: 250px;
+  }
+}
+
+/*laptop and desktop optimizations*/
+@media (min-width: 1300px){
+  .moon{
+    width: 750px;
+    height: 750px;
+    left: 11%;
+    top: -10px;
+    opacity: 0.6;
+  }
+  .join-us{
+    top: 500px;
+  }
+  .star2{
+    top: 450px
+  }
+}
+
+/* Larger desktops */
+@media (min-width: 1400px){
+  .moon{
+    width: 850px;
+    height: 850px;
+    left: 12%;
+    top: -10px;
+    opacity: 0.6;
+  }
+  .join-us{
+    top: 560px;
+  }
+
+  .star2{
+    top: 500px
+  }
+}
+
+/* Extra large desktops */
+@media (min-width: 1800px){
+  .moon{
+    width: 1000px;
+    height: 1000px;
+    left: 14%;
+    top: -10px;
+    opacity: 0.6;
+  }
+
+  .join-us{
+    top: 700px;
+  }
+
+  .star1{
+    top: 150px;
+    left: 1400px;
+  }
+  .star2{
+    top: 650px;
+    left: 1200px;
+  }
 }

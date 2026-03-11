@@ -842,6 +842,58 @@ section {
   margin-left: 40px;
 }
 
+
+/* ==================== Why WDS: stacked layout (426px–1100px) ==================== */
+@media (min-width: 426px) and (max-width: 1024px){
+  /* Pull the section up on small/tablet/laptop so it touches the hero */
+  .wds-section{
+    margin-top: -92px;
+    padding: 64px 20px 40px;
+  }
+
+  .wds-section .content{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    gap: 24px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .wds-section .image-box{
+    width: 260px;
+    height: 260px;
+    margin-left: 0;
+  }
+}
+
+/* ==================== Why WDS: phones (<=425px) ==================== */
+@media (max-width: 425px){
+  .wds-section{
+    margin-top: -55px;
+    padding: 48px 16px 32px;
+  }
+
+  .wds-section .content{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    gap: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .wds-section .image-box{
+    width: 220px;
+    height: 220px;
+    margin-left: 0;
+  }
+}
+
 /* ============================================== Sponsors Section =========================================== */
 .sponsors-section {
   padding: 80px 24px 100px;

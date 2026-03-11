@@ -17,7 +17,7 @@ html, body{
 }
 
 body{
-  background: linear-gradient(180deg, #111A2C 0%, #111A2C 50%, #1a2538 70%, #243d52 82%, #3d6a85 92%, #69C2E8 100%);
+  background: #111A2C;
   background-repeat: no-repeat;
   overflow-x: hidden;
   min-height: 100vh;
@@ -713,7 +713,6 @@ section {
   position: relative;
   width: 100%;
   min-height: 560px;
-  background: linear-gradient(180deg, #69C2E8 0%, #5ab0d0 18%, #3d8090 35%, #2a5060 55%, #224558 75%, #1e3a4a 100%);
   background-repeat: no-repeat;
   overflow: hidden;
   display: flex;

@@ -24,9 +24,7 @@ body{
   isolation: isolate;
 }
 
-.faq-body{
-  background: radial-gradient(circle at top left, #6c3a3a 0, #5a2f2f 48%, #3a1a1a 100%);
-}
+/* faq pages now use the default main background */
 
 body::before{
   content: "";
@@ -901,7 +899,7 @@ section {
 }
 
 .faq-section {
-  background: radial-gradient(circle at top left, #6c3a3a 0, var(--faq-bg) 48%, #3a1a1a 100%);
+  background: linear-gradient(180deg, #111A2C 0%, #111A2C 100%);
   color: var(--faq-text);
   padding: 96px 16px 120px;
 }

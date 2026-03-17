@@ -376,7 +376,7 @@ section {
   background: rgba(255,255,255,0.12);
   border-color: rgba(255,255,255,0.28);
 }
-
+ 
 /* Diagonal slash shine layer */
 .join-us::before{
   content: "";

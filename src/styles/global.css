@@ -1205,3 +1205,39 @@ section {
     padding-right: 0;
   }
 }
+
+
+/* Reich - Trying some minor adjustements to see if i can fix some bugs */
+
+html, body {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+.hero {
+  position: relative;
+  overflow-x: clip;
+}
+
+.wds-section {
+  overflow-x: clip;
+}
+
+.grains {
+  width: 100%;
+  height: 100%;
+}
+
+.hero .join-us {
+  position: absolute !important;
+  left: 50% !important;
+  top: auto !important;
+  bottom: clamp(110px, 25vh, 145px) !important;
+  transform: translateX(-50%) !important;
+  z-index: 2 !important;
+  margin: 0 !important;
+}
+
+.hero .join-us:hover {
+  transform: translateX(-50%) translateY(-1px) !important;
+}

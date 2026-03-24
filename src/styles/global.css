@@ -1206,5 +1206,27 @@ section {
   }
 }
 
+/* Reich - Trying some minor adjustements to see if i can fix some bugs */
 
+html, body {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+.hero {
+  position: relative;
+  overflow-x: clip;
+}
+
+.hero .join-us {
+  position: absolute !important;
+  left: 50% !important;
+  top: auto !important;
+  bottom: clamp(110px, 25vh, 145px) !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+}
+
+.hero .join-us:hover {
+  transform: translateX(-50%) translateY(-1px) !important;
 }

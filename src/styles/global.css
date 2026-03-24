@@ -1234,7 +1234,6 @@ html, body {
   top: auto !important;
   bottom: clamp(110px, 25vh, 145px) !important;
   transform: translateX(-50%) !important;
-  z-index: 2 !important;
   margin: 0 !important;
 }
 

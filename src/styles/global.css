@@ -317,7 +317,7 @@ section {
     height: 915px;
     left: 9%;
     animation: moon 360s infinite linear;
-    z-index: -1;
+    z-index: 0;
     opacity: 0.55;
 }
 
@@ -376,7 +376,7 @@ section {
   background: rgba(255,255,255,0.12);
   border-color: rgba(255,255,255,0.28);
 }
-
+ 
 /* Diagonal slash shine layer */
 .join-us::before{
   content: "";
@@ -651,7 +651,7 @@ section {
     top: 500px
   }
   .container.nav{
-    max-width: 1400px;
+    max-width: 1600px;
   }
 }
 
@@ -714,7 +714,8 @@ section {
   width: 100%;
   min-height: 560px;
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow: visible;
+  z-index: 3; /* allow shooting stars to render across section boundaries */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -739,6 +740,7 @@ section {
   height: 18px;
   transform: rotate(25deg);
   opacity: 0.95;
+  z-index: 1; /* keep above backgrounds, below content */
   filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.95)) drop-shadow(0 0 24px rgba(255, 200, 0, 0.8)) drop-shadow(0 0 40px rgba(255, 180, 0, 0.6));
 }
 
@@ -833,12 +835,16 @@ section {
 }
 
 .wds-section .image-box {
-  width: 340px;
-  height: 340px;
-  background: #fff;
+  width: min(560px, 100%);
   flex-shrink: 0;
   border-radius: 2px;
   margin-left: 40px;
+}
+
+.wds-section .image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 
@@ -862,8 +868,7 @@ section {
   }
 
   .wds-section .image-box{
-    width: 260px;
-    height: 260px;
+    width: min(560px, 100%);
     margin-left: 0;
   }
 }
@@ -887,8 +892,7 @@ section {
   }
 
   .wds-section .image-box{
-    width: 220px;
-    height: 220px;
+    width: 100%;
     margin-left: 0;
   }
 }
@@ -896,7 +900,6 @@ section {
 /* ============================================== Sponsors Section =========================================== */
 .sponsors-section {
   padding: 80px 24px 100px;
-  background: #0d1523;
 }
 
 .sponsors-inner {
@@ -987,15 +990,43 @@ section {
   --faq-transition-duration: 220ms;
 }
 
+/* 1. Force the moon's container to the absolute background */
+.faq-hero {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1 !important; 
+    pointer-events: none; /* Ensures the moon doesn't block clicks on the text */
+}
+
+.moon {
+    z-index: -1 !important;
+}
+
+
 .faq-section {
-  background: linear-gradient(180deg, #111A2C 0%, #111A2C 100%);
+  background: #111A2C;
   color: var(--faq-text);
   padding: 96px 16px 120px;
+  z-index: 10;
+  background: transparent; /* Ensures no weird background colors are blending */
+
 }
 
 .faq-inner {
   max-width: var(--faq-max-width);
   margin: 0 auto;
+}
+
+.faq-kicker,
+.faq-title,
+.faq-intro,
+.faq-question-text,
+.faq-panel p {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 1), 0px 2px 5px rgba(0, 0, 0, 1) !important;
 }
 
 .faq-header {
@@ -1185,5 +1216,190 @@ section {
 
   .faq-panel-body {
     padding-right: 0;
+  }
+}
+
+/* Reich - Trying some minor adjustements to see if i can fix some bugs */
+
+html, body {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+.hero {
+  position: relative;
+  overflow-x: clip;
+}
+
+.hero .join-us {
+  position: absolute !important;
+  left: 50% !important;
+  top: auto !important;
+  bottom: clamp(110px, 25vh, 145px) !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+}
+
+.hero .join-us:hover {
+  transform: translateX(-50%) translateY(-1px) !important;
+}
+/* ================================================================================================ Meet the Team ====================================================================================================== */
+
+#team {
+  text-align: center;
+}
+
+#team .team-heading {
+  font-family: 'Barlow Condensed', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+  color: #ffffff;
+}
+
+#team .team-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 20px;
+  display: grid;
+  row-gap: 28px;
+  justify-items: center;
+}
+
+#team .team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 28px;
+  width: 100%;
+}
+
+/* Center the first row of two members in a 4-column layout */
+#team .team-grid > .member:nth-child(1) {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+#team .team-grid > .member:nth-child(2) {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+/* Force a 2 / 4 / 4 / 4 / 3 arrangement */
+#team .team-grid > .member:nth-child(3),
+#team .team-grid > .member:nth-child(4),
+#team .team-grid > .member:nth-child(5),
+#team .team-grid > .member:nth-child(6) {
+  grid-row: 2;
+}
+
+#team .team-grid > .member:nth-child(7),
+#team .team-grid > .member:nth-child(8),
+#team .team-grid > .member:nth-child(9),
+#team .team-grid > .member:nth-child(10) {
+  grid-row: 3;
+}
+
+#team .team-grid > .member:nth-child(11),
+#team .team-grid > .member:nth-child(12),
+#team .team-grid > .member:nth-child(13),
+#team .team-grid > .member:nth-child(14) {
+  grid-row: 4;
+}
+
+#team .team-grid > .member:nth-child(15),
+#team .team-grid > .member:nth-child(16),
+#team .team-grid > .member:nth-child(17) {
+  grid-row: 5;
+}
+
+#team .team-grid > .member:nth-child(15) {
+  grid-column: 1 / 3;
+}
+
+#team .team-grid > .member:nth-child(16) {
+  grid-column: 2 / 4;
+}
+
+#team .team-grid > .member:nth-child(17) {
+  grid-column: 3 / 5;
+}
+
+#team .member {
+  display: grid;
+  justify-items: center;
+  row-gap: 10px;
+}
+
+#team .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+#team .role {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1.2;
+  opacity: 0.8;
+  margin: 2px 0 0 0;
+  color: #ffffff;
+}
+
+#team .name {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+}
+
+#team .spacer-lg {
+  height: 8px;
+}
+
+@media (max-width: 900px) {
+  #team .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Let auto-flow handle positions on small screens */
+  #team .team-grid > .member {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  #team .avatar {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 550px) {
+  #team .team-wrapper {
+    padding: 40px 16px;
+  }
+
+  #team .team-grid {
+    grid-template-columns: 1fr;
+    gap: 22px 18px;
+  }
+
+  #team .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  #team .name {
+    font-size: 15px;
+  }
+
+  #team .role {
+    font-size: 11px;
   }
 }

@@ -977,15 +977,43 @@ section {
   --faq-transition-duration: 220ms;
 }
 
+/* 1. Force the moon's container to the absolute background */
+.faq-hero {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1 !important; 
+    pointer-events: none; /* Ensures the moon doesn't block clicks on the text */
+}
+
+.moon {
+    z-index: -1 !important;
+}
+
+
 .faq-section {
   background: #111A2C;
   color: var(--faq-text);
   padding: 96px 16px 120px;
+  z-index: 10;
+  background: transparent; /* Ensures no weird background colors are blending */
+
 }
 
 .faq-inner {
   max-width: var(--faq-max-width);
   margin: 0 auto;
+}
+
+.faq-kicker,
+.faq-title,
+.faq-intro,
+.faq-question-text,
+.faq-panel p {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 1), 0px 2px 5px rgba(0, 0, 0, 1) !important;
 }
 
 .faq-header {

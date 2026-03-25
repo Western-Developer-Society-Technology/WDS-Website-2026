@@ -80,7 +80,7 @@ section {
 
 .logo{
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
@@ -1294,7 +1294,7 @@ html, body {
   position: absolute !important;
   left: 50% !important;
   top: auto !important;
-  bottom: clamp(110px, 25vh, 145px) !important;
+  bottom: clamp(150px, 45vh, 185px) !important;
   transform: translateX(-50%) !important;
   margin: 0 !important;
 }
@@ -1429,7 +1429,7 @@ html, body {
   width: 800px;
   height: 649px;
   z-index: 2;
-  left: -112px;
+  left: -10vw;
 }
 
 .cloud-2{
@@ -1437,7 +1437,7 @@ html, body {
   width: 1000px;
   height: 649px;
   z-index: 0;
-  left: 803px;
+  left: 55vw;
   transform: translateY(590px) scaleX(-1);
 }
 

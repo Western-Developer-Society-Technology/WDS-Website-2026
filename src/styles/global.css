@@ -312,7 +312,7 @@ section {
 
 .moon{
     position: absolute;
-    top: 0%;
+    top: -12%!important;
     width: 889px;
     height: 915px;
     left: 9%;

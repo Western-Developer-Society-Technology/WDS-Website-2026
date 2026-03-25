@@ -139,7 +139,7 @@
 .carousel-dots {
     position: absolute;
     bottom: 10%;
-    left: 10vw; /* Aligns with the text column */
+    left: 10vw; /* Aligns with the text column /*/ 
     display: flex;
     gap: 12px;
     z-index: 10;

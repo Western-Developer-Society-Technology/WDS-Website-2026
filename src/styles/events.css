@@ -1,4 +1,8 @@
 /* Container for the whole section */
+.main-body3{
+    background: #111A2C;
+}
+
 .events-section {
     position: relative;
     width: 100vw;

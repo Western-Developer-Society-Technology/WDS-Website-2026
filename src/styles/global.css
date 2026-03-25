@@ -10,18 +10,20 @@
 }
 
 html, body{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body{
-  background: #111A2C;
-  background-repeat: no-repeat;
-  overflow-x: hidden;
-  min-height: 100vh;
-  isolation: isolate;
+min-height: 100vh;
+height: auto;
+background: linear-gradient(180deg, #111A2C 31.63%, #69C2E8 68.27%);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+overflow-x: hidden;
+isolation: isolate;
 }
 
 /* faq pages now use the default main background */
@@ -605,6 +607,7 @@ section {
   }
   .join-us{
     top: 440px;
+    width:60%;
   }
 
   .star1{
@@ -631,6 +634,15 @@ section {
   }
   .star2{
     top: 450px
+  }
+}
+
+@media (min-width: 760px) and (max-width: 999px){
+  .moon{
+    top: -120px;
+  }
+  .logo{
+    size: 900px;
   }
 }
 
@@ -838,7 +850,7 @@ section {
   width: min(560px, 100%);
   flex-shrink: 0;
   border-radius: 2px;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .wds-section .image-box img {
@@ -847,6 +859,13 @@ section {
   display: block;
 }
 
+
+/*Adjusting photo positioning WHY WDS*/
+@media (min-width:1100px){
+  .wds-section .image-box{
+    transform: translateX(130px);
+  }
+}
 
 /* ==================== Why WDS: stacked layout (426px–1100px) ==================== */
 @media (min-width: 426px) and (max-width: 1024px){
@@ -900,10 +919,11 @@ section {
 /* ============================================== Sponsors Section =========================================== */
 .sponsors-section {
   padding: 80px 24px 100px;
+  padding-bottom: 250px;
 }
 
 .sponsors-inner {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -935,46 +955,81 @@ section {
 .sponsors-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(14px, 2.5vw, 28px);
+  gap: 28px;
 }
 
-.sponsor-logo-placeholder {
-  aspect-ratio: 5 / 3;
-  min-height: 110px;
+.sponsor-logo-placeholder{
+  aspect-ratio: 9 / 9;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.04));
-  padding: clamp(12px, 2vw, 20px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.45),
     0 0 0 1px rgba(255, 255, 255, 0.06);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sponsor-logo-placeholder img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 @media (max-width: 800px) {
   .sponsors-section {
     padding: 64px 20px 80px;
   }
+  .sponsors-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
 
-  .sponsors-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .sponsor-logo-placeholder{
+    max-width: 160px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .sponsor-logo-placeholder img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
   }
 }
 
 @media (max-width: 520px) {
   .sponsors-grid {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 }
 
-.sponsor-logo-placeholder img {
-  width: 100%;
-  height: 100%;
-  max-width: 180px;
-  max-height: 72px;
-  object-fit: contain;
+/*Adjusting the header for different screen sizes */
+@media (max-width: 800px){
+  .sponsors-header{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1100px){
+  .sponsors-header{
+    margin-left: calc(10vw - ((100vw - 1100px) / 2));
+  }
+}
+@media (min-width: 760px) and (max-width: 999px){
+  .sponsor-logo-placeholder{
+    max-width: 330px;
+  }
 }
 
 /* ============================================== FAQ Accordion =========================================== */
@@ -1002,6 +1057,10 @@ section {
 
 .moon {
     z-index: -1 !important;
+}
+
+.main-body2{
+  background: #111A2C;
 }
 
 
@@ -1247,13 +1306,14 @@ html, body {
 
 #team {
   text-align: center;
+  overflow: hidden;
 }
 
 #team .team-heading {
-  font-family: 'Barlow Condensed', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-weight: 700;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 32px;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
   margin: 0;
   color: #ffffff;
 }
@@ -1269,6 +1329,7 @@ html, body {
 
 #team .team-grid {
   display: grid;
+  z-index: 10;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 28px 28px;
   width: 100%;
@@ -1363,6 +1424,23 @@ html, body {
   height: 8px;
 }
 
+.cloud-1{
+  position: absolute;
+  width: 800px;
+  height: 649px;
+  z-index: 2;
+  left: -112px;
+}
+
+.cloud-2{
+  position: absolute;
+  width: 1000px;
+  height: 649px;
+  z-index: 0;
+  left: 803px;
+  transform: translateY(590px) scaleX(-1);
+}
+
 @media (max-width: 900px) {
   #team .team-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1380,14 +1458,25 @@ html, body {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 770px) {
   #team .team-wrapper {
     padding: 40px 16px;
   }
 
   #team .team-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px 18px;
+  }
+
+  #team .team-grid > .member {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  #team .team-grid > .member:last-child:nth-child(odd) {
+    grid-column: 1 / -1 !important;
+    justify-self: center;
+    width: fit-content;
   }
 
   #team .avatar {
@@ -1401,5 +1490,13 @@ html, body {
 
   #team .role {
     font-size: 11px;
+  }
+
+  .cloud-1{
+    left: -300px;
+  }
+  .cloud-2{
+    left:100px;
+    transform: translateY(700px) scaleX(-1);
   }
 }

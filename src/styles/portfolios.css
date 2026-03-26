@@ -1,0 +1,663 @@
+/* Container for the whole section */
+.portfolio {
+    position: relative;
+    width: 100vw;
+    min-height: calc(100vh - 80px); /* Adjusts for header */
+    display: flex;
+    align-items: center;
+}
+
+/* Background Planet */
+.purpleplanet {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 6%;
+    left: 8%;
+    opacity: 0.8;
+    filter: blur(4px);
+    z-index: 0;
+}
+
+/* Title */
+.main-title {
+    position: absolute;
+    justify-content: center;
+    top: 2vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 3rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+/* Container holding all circles — use absolute positioning */
+
+.neon-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; 
+}
+
+/* Base circle style */
+.neon-circle {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: rgb(166, 166, 166);
+    border: 1.5px solid rgba(250, 252, 255, 1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 
+        width 0.4s ease,
+        height 0.4s ease,
+        border-radius 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.neon-circle p{
+    font-family: 'Bellefair';
+}
+
+/* Circle positions — adjust percentages to match your design */
+.neon-circle4 { top: 50%; left: 50%; }        /* INTERNALS — center */
+.neon-circle1 { top: 25%; left: 38%; }         /* DEVELOPMENT — top left */
+.neon-circle2 { top: 52%; left: 29%; }         /* TECHNOLOGY — mid left */
+.neon-circle3 { top: 78%; left: 38%; }         /* FINANCE — bottom left */
+.neon-circle5 { top: 78%; left: 62%; }         /* MARKETING — bottom right */
+.neon-circle6 { top: 52%; left: 72%; }         /* CAREERS — mid right */
+.neon-circle7 { top: 25%; left: 60%; }         /* EXTERNALS — top right */
+
+.neon-line{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.connector{
+    stroke: rgba(255, 255, 255, 0.7);
+    stroke-width: 1.5;
+    z-index: 1;
+}
+
+/* The hidden info text */
+.circle-info {
+    display: none;
+    margin-top: 4px;
+    font-family: 'Bellefair';
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(5, 5, 5, 0.85);
+    line-height: 1.4;
+}
+/* Hover state — circle expands into rounded rectangle */
+.neon-circle:hover {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
+    border-color: rgba(251, 253, 255, 0.9);
+    z-index: 10;
+    justify-content: center;
+}
+
+/* Hover state- display info */
+.neon-circle:hover .circle-info {
+    display: flex;
+}
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    overflow: clip;
+}
+
+/* Timeline Title */
+.main-title2 {
+    position: absolute;
+    justify-content: center;
+    top: 2vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+
+/* VP container */
+.vp-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+}
+.vp-title p{
+    position: absolute;
+    top: 4vh; 
+    left: 30%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.vertical{
+    position: absolute;
+    height: 500px;
+    top: 15%; 
+    left: 30%;
+    border: 1px solid #FFFFFF;
+}
+.may-june{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+.ellipse{
+    position: absolute;
+    top: 17.5%;
+    left: 29.4%;
+    height: 18px;
+    width: 18px;
+}
+.ellipse1{
+    position: absolute;
+    top: 37.5%;
+    left: 29.4%;
+    height: 18px;
+    width: 18px;
+}
+.applications{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 20%;
+    left: 32%;
+}
+.june-july{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 35%;
+    left: 30.5%;
+}
+.interview{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 41%;
+    left: 18%;
+}
+.july{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 56%;
+    left: 15%;
+}
+.ellipse2{
+    position: absolute;
+    top: 58.7%;
+    left: 29.4%;
+    height: 18px;
+    width: 18px;
+}
+.acceptance{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 64%;
+    left: 32%;
+}
+.director-title p{
+    position: absolute;
+    top: 4vh; 
+    left: 70%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.vertical1{
+    position: absolute;
+    height: 500px;
+    top: 15%; 
+    left: 70%;
+    border: 1px solid #FFFFFF;
+}
+.may-june2{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: 55%;
+}
+.ellipse3{
+    position: absolute;
+    top: 17.5%;
+    left: 69.45%;
+    height: 18px;
+    width: 18px;
+}
+.applications2{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 20%;
+    left: 72%;
+    z-index:2;
+}
+.june-july2{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 35%;
+    left: 71%;
+}
+.ellipse4{
+    position: absolute;
+    top: 38%;
+    left: 69.45%;
+    height: 18px;
+    width: 18px;
+}
+.july2{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 56%;
+    left: 55%;
+}
+.interview2{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 41%;
+    left: 57%;
+}
+.ellipse5{
+    position: absolute;
+    top: 58.7%;
+    left: 69.45%;
+    height: 18px;
+    width: 18px;
+}
+.acceptance2{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 64%;
+    left: 72%;
+}
+.secondplanet{
+   position: absolute;
+    width: 220px;
+    height: 220px;
+    top: 4%;
+    left: 80%;
+    filter: blur(1px);
+    z-index: 1;
+    opacity:1;
+    will-change: transform;
+}
+.rings{
+    position: absolute;
+    width: 1100px;
+    height: 1270px;
+    top: -59%;
+    left: 26.7%;
+    filter: blur(1px);
+    z-index: 0;
+    will-change: transform;
+     
+}
+
+@media (max-width: 480px) {
+.purpleplanet {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 4%;
+    left: 4%;
+    opacity: 0.8;
+    filter: blur(4px);
+    z-index: 0;
+}
+.main-title {
+    position: absolute;
+    justify-content: center;
+    top: 2vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+
+.neon-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgb(166, 166, 166);
+    border: 1.5px solid rgba(250, 252, 255, 1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 
+        width 0.4s ease,
+        height 0.4s ease,
+        border-radius 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.neon-circle p{
+    font-family: 'Bellefair';
+    font-size: 0.75rem;
+}
+
+.neon-circle:hover {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+        justify-content: center;
+    }
+
+    .neon-circle:hover .circle-info {
+        display: none;
+    }
+
+    .neon-circle.active {
+        width: 140px;
+        height: 140px;
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
+        z-index: 10;
+        justify-content: center;
+    }
+
+    .neon-circle.active .circle-info {
+        display: flex;
+    }
+
+.circle-info p{
+    font-size:0.5rem;
+}
+
+/* Circle positions — adjust percentages to match your design */
+.neon-circle4 { top: 20%; left: 50%; }        /* INTERNALS — center */
+.neon-circle1 { top: 40%; left: 28%; }         /* DEVELOPMENT — top left */
+.neon-circle2 { top: 95%; left: 50%; }         /* TECHNOLOGY — mid left */
+.neon-circle3 { top: 77%; left: 28%; }         /* FINANCE — bottom left */
+.neon-circle5 { top: 77%; left: 73%; }         /* MARKETING — bottom right */
+.neon-circle6 { top: 58%; left: 50%; }         /* CAREERS — mid right */
+.neon-circle7 { top: 40%; left: 73%; }         /* EXTERNALS — top right */
+
+.neon-line {
+        display: none;
+    }
+.neon-line2{
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+.connector2{
+    stroke: rgba(255, 255, 255, 0.7);
+    stroke-width: 1.5;
+    z-index: 1;
+}
+.main-title2 {
+    position: absolute;
+    justify-content: center;
+    top: 9vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.vp-title p{
+    position: absolute;
+    top: 7vh; 
+    left: 30%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.director-title p{
+    position: absolute;
+    top: 7vh; 
+    left: 75%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.vertical{
+    position: absolute;
+    height: 330px;
+    top: 13%; 
+    left: 28.5%;
+    border: 1px solid #FFFFFF;
+}
+.may-june{
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 13%;
+    left: 1.5%;
+}
+.ellipse{
+    position: absolute;
+    top: 14.5%;
+    left: 27.5%;
+    height: 10px;
+    width: 10px;
+}
+.ellipse1{
+    position: absolute;
+    top: 28.5%;
+    left: 27.5%;
+    height: 10px;
+    width: 10px;
+}
+.applications{
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 18%;
+    left: 32%;
+}
+.june-july{
+    width: 110px;
+    height: auto;
+    position: absolute;
+    top: 27%;
+    left: 30.5%;
+}
+.interview{
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 33.5%;
+    left: 5%;
+}
+.july{
+    width: 105px;
+    height: auto;
+    position: absolute;
+    top: 42%;
+    left: 1.5%;
+}
+.ellipse2{
+    position: absolute;
+    top: 43.5%;
+    left: 27.5%;
+    height: 10px;
+    width: 10px;
+}
+.acceptance{
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 48%;
+    left: 32%;
+}
+.vertical1{
+    position: absolute;
+    height: 330px;
+    top: 13%; 
+    left: 74%;
+    border: 1px solid #FFFFFF;
+}
+.may-june2{
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 13%;
+    left: 49%;
+}
+.ellipse3{
+    position: absolute;
+    top: 14.5%;
+    left: 73%;
+    height: 10px;
+    width: 10px;
+}
+.applications2{
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 18%;
+    left: 77%;
+    z-index:2;
+}
+.june-july2{
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 27%;
+    left: 75%;
+}
+.ellipse4{
+    position: absolute;
+    top: 28.5%;
+    left: 73%;
+    height: 10px;
+    width: 10px;
+}
+.july2{
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 42%;
+    left: 48%;
+}
+.interview2{
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 33.5%;
+    left: 50%;
+}
+.ellipse5{
+    position: absolute;
+    top: 43.4%;
+    left: 73%;
+    height: 10px;
+    width: 10px;
+}
+.acceptance2{
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 48%;
+    left: 77%;
+}
+.secondplanet{
+   position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 4%;
+    left: 75%;
+    filter: blur(1px);
+    z-index: 1;
+    opacity:1;
+    will-change: transform;
+}
+.rings{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: -21%;
+    left: -14%;
+    filter: blur(1px);
+    z-index: 0;
+    will-change: transform;
+     
+}
+ 
+
+}

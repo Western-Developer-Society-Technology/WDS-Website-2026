@@ -669,11 +669,40 @@ section {
 
 /* 4K Screens */
 @media (min-width: 2550px){
-  .moon{
+.faq-section {
+        margin-top: 300px;
+        /*min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 120px 16px;*/
+    }
+
+    .faq-inner {
+        width: 100%;
+        max-width: 1400px;
+    }
+
+    .faq-title {
+        font-size: 4rem;
+    }
+
+    .faq-kicker {
+        font-size: 1.2rem;
+    }
+
+    .faq-intro {
+        font-size: 1.3rem;
+        max-width: 800px;
+    }
+
+    .faq-question-text {
+        font-size: 1.5rem;
+    }
+    .moon{
     width: 1000px;
     height: 1000px;
     left: 14%;
-    top: -10px;
+    top: 15px;
     opacity: 0.6;
   }
 
@@ -711,6 +740,8 @@ section {
     font-size: 18px;
     left: 45%;
   }
+
+  
 }
 
 /* ============================================== Page content (e.g. Why WDS) =========================================== */

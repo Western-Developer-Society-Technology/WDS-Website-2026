@@ -552,7 +552,7 @@ section {
   .moon{
     width: 600px;
     height: 600px;
-    left: 5%;
+    left: -8%;
     top: -120px;
     opacity: 0.5;
   }
@@ -564,11 +564,11 @@ section {
 
   .star1{
     top: 200px;
-    left: 500px;
+    left: 200px;
   }
   .star2{
-    top: 450px;
-    left: 400px;
+    top: 350px;
+    left: 150px;
   }
 
   .grains{

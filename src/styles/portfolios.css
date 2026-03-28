@@ -23,12 +23,12 @@
 .main-title {
     position: absolute;
     justify-content: center;
-    top: 2vh; 
+    top: 3vh; 
     left: 50%;
     white-space: nowrap;
     transform: translateX(-50%);
     font-family: 'Bellefair';
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
@@ -403,30 +403,30 @@
     font-size: 0.75rem;
 }
 
+.circle-info {
+    display: none;
+    margin-top: 4px;
+    font-family: 'Bellefair';
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(5, 5, 5, 0.85);
+    line-height: 1.4;
+}
+/* Hover state — circle expands into rounded rectangle */
 .neon-circle:hover {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 1);
-        justify-content: center;
-    }
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
+    border-color: rgba(251, 253, 255, 0.9);
+    z-index: 10;
+    justify-content: center;
+}
 
-    .neon-circle:hover .circle-info {
-        display: none;
-    }
-
-    .neon-circle.active {
-        width: 140px;
-        height: 140px;
-        border-radius: 20px;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
-        z-index: 10;
-        justify-content: center;
-    }
-
-    .neon-circle.active .circle-info {
-        display: flex;
-    }
+/* Hover state- display info */
+.neon-circle:hover .circle-info {
+    display: flex;
+}
 
 .circle-info p{
     font-size:0.5rem;
@@ -658,6 +658,651 @@
     will-change: transform;
      
 }
- 
+}
+@media (min-width: 1660px){
 
+.purpleplanet {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 4%;
+    left: 8%;
+    opacity: 0.8;
+    filter: blur(4px);
+    z-index: 0;
+}
+.main-title {
+    position: absolute;
+    justify-content: center;
+    top: 3vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 5rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.neon-circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgb(166, 166, 166);
+    border: 1.5px solid rgba(250, 252, 255, 1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 
+        width 0.4s ease,
+        height 0.4s ease,
+        border-radius 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.neon-circle p{
+    font-family: 'Bellefair';
+    font-size: 2rem;
+}
+
+/* Circle positions — adjust percentages to match your design */
+.neon-circle4 { top: 50%; left: 50%; }        /* INTERNALS — center */
+.neon-circle1 { top: 25%; left: 38%; }         /* DEVELOPMENT — top left */
+.neon-circle2 { top: 52%; left: 29%; }         /* TECHNOLOGY — mid left */
+.neon-circle3 { top: 78%; left: 38%; }         /* FINANCE — bottom left */
+.neon-circle5 { top: 78%; left: 62%; }         /* MARKETING — bottom right */
+.neon-circle6 { top: 52%; left: 72%; }         /* CAREERS — mid right */
+.neon-circle7 { top: 25%; left: 60%; }         /* EXTERNALS — top right */
+
+.neon-line{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.connector{
+    stroke: rgba(255, 255, 255, 0.7);
+    stroke-width: 1.5;
+    z-index: 1;
+}
+
+/* The hidden info text */
+.circle-info {
+    display: none;
+    margin-top: 4px;
+    font-family: 'Bellefair';
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: rgba(5, 5, 5, 0.85);
+    line-height: 1.4;
+}
+/* Hover state — circle expands into rounded rectangle */
+.neon-circle:hover {
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
+    border-color: rgba(251, 253, 255, 0.9);
+    z-index: 10;
+    justify-content: center;
+}
+
+/* Hover state- display info */
+.neon-circle:hover .circle-info {
+    display: flex;
+}
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    overflow: clip;
+}
+
+/* Timeline Title */
+.main-title2 {
+    position: absolute;
+    justify-content: center;
+    top: 1vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 5rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+
+.vp-title p{
+    position: absolute;
+    top: 6vh; 
+    left: 30%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.vertical{
+    position: absolute;
+    height: 950px;
+    top: 15%; 
+    left: 30%;
+    border: 1px solid #FFFFFF;
+}
+.may-june{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+.ellipse{
+    position: absolute;
+    top: -6%;
+    left: 14.4%;
+    height: 900px;
+    width: 900px;
+}
+.ellipse1{
+    position: absolute;
+    top: 12%;
+    left: 14.4%;
+    height: 900px;
+    width: 900px;
+}
+.applications{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 22%;
+    left: 32%;
+}
+.june-july{
+    width: 390px;
+    height: auto;
+    position: absolute;
+    top: 33%;
+    left: 30.5%;
+}
+.interview{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 41%;
+    left: 18%;
+}
+.july{
+    width: 390px;
+    height: auto;
+    position: absolute;
+    top: 53%;
+    left: 16%;
+}
+.ellipse2{
+    position: absolute;
+    top: 32%;
+    left: 14.4%;
+    height: 900px;
+    width: 900px;
+}
+.acceptance{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 58%;
+    left: 32%;
+}
+.director-title p{
+    position: absolute;
+    top: 5vh; 
+    left: 70%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.vertical1{
+    position: absolute;
+    height: 950px;
+    top: 15%; 
+    left: 70%;
+    border: 1px solid #FFFFFF;
+}
+.may-june2{
+    width: 390px;
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: 55%;
+}
+.ellipse3{
+    position: absolute;
+    top: -6%;
+    left: 54.4%;
+    height: 900px;
+    width: 900px;
+}
+.applications2{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 22%;
+    left: 72%;
+    z-index:2;
+}
+.june-july2{
+    width: 390px;
+    height: auto;
+    position: absolute;
+    top: 35%;
+    left: 71%;
+}
+.ellipse4{
+    position: absolute;
+    top: 38%;
+    left: 69.7%;
+    height: 18px;
+    width: 18px;
+}
+.july2{
+    width: 390px;
+    height: auto;
+    position: absolute;
+    top: 53%;
+    left: 55%;
+}
+.interview2{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 41%;
+    left: 57%;
+}
+.ellipse5{
+    position: absolute;
+    top: 55%;
+    left: 69.7%;
+    height: 18px;
+    width: 18px;
+}
+.acceptance2{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 58%;
+    left: 72%;
+}
+.secondplanet{
+   position: absolute;
+    width: 220px;
+    height: 220px;
+    top: 2%;
+    left: 83%;
+    filter: blur(1px);
+    z-index: 1;
+    opacity:1;
+    will-change: transform;
+}
+.rings{
+    position: absolute;
+    width: 1100px;
+    height: 1270px;
+    top: -27%;
+    left: 56%;
+    filter: blur(1px);
+    z-index: 0;
+    will-change: transform;
+     
+}   
+}
+@media (max-width: 1024px) {
+
+.purpleplanet {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 5%;
+    left: 8%;
+    opacity: 0.8;
+    filter: blur(4px);
+    z-index: 0;
+}
+
+/* Title */
+.main-title {
+    position: absolute;
+    justify-content: center;
+    top: 4vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 3rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.neon-circle {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: rgb(166, 166, 166);
+    border: 1.5px solid rgba(250, 252, 255, 1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 
+        width 0.4s ease,
+        height 0.4s ease,
+        border-radius 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.neon-circle p{
+    font-family: 'Bellefair';
+}
+
+/* Circle positions — adjust percentages to match your design */
+.neon-circle4 { top: 50%; left: 50%; }        /* INTERNALS — center */
+.neon-circle1 { top: 25%; left: 35%; }         /* DEVELOPMENT — top left */
+.neon-circle2 { top: 52%; left: 27%; }         /* TECHNOLOGY — mid left */
+.neon-circle3 { top: 78%; left: 35%; }         /* FINANCE — bottom left */
+.neon-circle5 { top: 78%; left: 64%; }         /* MARKETING — bottom right */
+.neon-circle6 { top: 52%; left: 74%; }         /* CAREERS — mid right */
+.neon-circle7 { top: 25%; left: 63%; }         /* EXTERNALS — top right */
+
+.neon-line3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.connector3{
+    stroke: rgba(255, 255, 255, 0.7);
+    stroke-width: 1.5;
+    z-index: 1;
+}
+.neon-line {
+    display: none;
+}
+.neon-line2 {
+    display: none;
+}
+.neon-line3 {
+    display: block;
+}
+
+/* The hidden info text */
+.circle-info {
+    display: none;
+    margin-top: 4px;
+    font-family: 'Bellefair';
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(5, 5, 5, 0.85);
+    line-height: 1.4;
+}
+/* Hover state — circle expands into rounded rectangle */
+.neon-circle:hover {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
+    border-color: rgba(251, 253, 255, 0.9);
+    z-index: 10;
+    justify-content: center;
+}
+
+/* Hover state- display info */
+.neon-circle:hover .circle-info {
+    display: flex;
+}
+.main-title2 {
+    position: absolute;
+    justify-content: center;
+    top: 1vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 3rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+
+/* VP container */
+.vp-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+}
+.vp-title p{
+    position: absolute;
+    top: 4.5vh; 
+    left: 30%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.vertical{
+    position: absolute;
+    height: 570px;
+    top: 10%; 
+    left: 30%;
+    border: 1px solid #FFFFFF;
+}
+.may-june{
+    width: 230px;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 7%;
+}
+.ellipse{
+    position: absolute;
+    top: 12%;
+    left: 29.3%;
+    height: 18px;
+    width: 18px;
+}
+.ellipse1{
+    position: absolute;
+    top: 25%;
+    left: 29.3%;
+    height: 18px;
+    width: 18px;
+}
+.applications{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 15%;
+    left: 33%;
+}
+.june-july{
+    width: 230px;
+    height: auto;
+    position: absolute;
+    top: 23%;
+    left: 30.5%;
+}
+.interview{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 29%;
+    left: 11%;
+}
+.july{
+    width: 230px;
+    height: auto;
+    position: absolute;
+    top: 38%;
+    left: 7%;
+}
+.ellipse2{
+    position: absolute;
+    top: 40%;
+    left: 29.3%;
+    height: 18px;
+    width: 18px;
+}
+.acceptance{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 44%;
+    left: 33%;
+}
+.director-title p{
+    position: absolute;
+    top: 4vh; 
+    left: 70%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.vertical1{
+    position: absolute;
+    height: 570px;
+    top: 10%; 
+    left: 70%;
+    border: 1px solid #FFFFFF;
+}
+.may-june2{
+    width: 230px;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 48%;
+}
+.ellipse3{
+    position: absolute;
+    top: 12%;
+    left: 69.4%;
+    height: 18px;
+    width: 18px;
+}
+.applications2{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 15%;
+    left: 73%;
+    z-index:2;
+}
+.june-july2{
+    width: 230px;
+    height: auto;
+    position: absolute;
+    top: 23%;
+    left: 71%;
+}
+.ellipse4{
+    position: absolute;
+    top: 25%;
+    left: 69.4%;
+    height: 18px;
+    width: 18px;
+}
+.july2{
+    width: 230px;
+    height: auto;
+    position: absolute;
+    top: 38%;
+    left: 48%;
+}
+.interview2{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 29%;
+    left: 51%;
+}
+.ellipse5{
+    position: absolute;
+    top: 40%;
+    left: 69.4%;
+    height: 18px;
+    width: 18px;
+}
+.acceptance2{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 44%;
+    left: 73%;
+}
+.secondplanet{
+   position: absolute;
+    width: 220px;
+    height: 220px;
+    top: 0%;
+    left: 80%;
+    filter: blur(1px);
+    z-index: 1;
+    opacity:1;
+    will-change: transform;
+}
+.rings{
+    position: absolute;
+    width: 1100px;
+    height: 1270px;
+    top: -39%;
+    left: 4.5%;
+    filter: blur(1px);
+    z-index: 0;
+    will-change: transform;
+     
+}
 }

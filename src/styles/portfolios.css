@@ -1525,7 +1525,7 @@
 }
 }
 @media(max-width: 393px){
-vp-container {
+.vp-container {
     position: relative;
     width: 100vw;
     min-height: 50vh;

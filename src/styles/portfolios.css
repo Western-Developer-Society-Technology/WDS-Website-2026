@@ -999,8 +999,190 @@
     position: absolute;
     width: 1100px;
     height: 1270px;
-    top: -49%;
-    left: -14%;
+    top: -43%;
+    left: 5%;
+    filter: blur(1px);
+    z-index: 1;
+    will-change: transform;
+     
+}
+}
+@media(max-width: 768px){
+    .vp-container {
+    position: relative;
+    width: 100vw;
+    min-height: 90vh;
+}
+.vertical{
+    position: absolute;
+    height: 650px;
+    top: 12%; 
+    left: 30%;
+    border: 1px solid #FFFFFF;
+}
+.may-june{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 12%;
+    left: 4%;
+}
+.ellipse{
+    position: absolute;
+    top: 14%;
+    left: 29%;
+    height: 18px;
+    width: 18px;
+}
+.ellipse1{
+    position: absolute;
+    top: 37.5%;
+    left: 29%;
+    height: 18px;
+    width: 18px;
+}
+.applications{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 23%;
+    left: 33%;
+}
+.june-july{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 35%;
+    left: 30.5%;
+}
+.interview{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 44%;
+    left: 9%;
+}
+.july{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 56%;
+    left: 4%;
+}
+.ellipse2{
+    position: absolute;
+    top: 58.7%;
+    left: 29%;
+    height: 18px;
+    width: 18px;
+}
+.acceptance{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 66%;
+    left: 33%;
+}
+.director-title p{
+    position: absolute;
+    top: 4vh; 
+    left: 70%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.vertical1{
+    position: absolute;
+    height: 650px;
+    top: 12%; 
+    left: 70%;
+    border: 1px solid #FFFFFF;
+}
+.may-june2{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 12%;
+    left: 44%;
+}
+.ellipse3{
+    position: absolute;
+    top: 14%;
+    left: 69%;
+    height: 18px;
+    width: 18px;
+}
+.applications2{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 23%;
+    left: 74%;
+    z-index:2;
+}
+.june-july2{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 35%;
+    left: 71%;
+}
+.ellipse4{
+    position: absolute;
+    top: 37%;
+    left: 69%;
+    height: 18px;
+    width: 18px;
+}
+.july2{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 56%;
+    left: 44%;
+}
+.interview2{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 45%;
+    left: 49%;
+}
+.ellipse5{
+    position: absolute;
+    top: 58.7%;
+    left: 69%;
+    height: 18px;
+    width: 18px;
+}
+.acceptance2{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 66%;
+    left: 73%;
+}
+.secondplanet{
+   position: absolute;
+    width: 220px;
+    height: 220px;
+    top: 4%;
+    left: 80%;
+    filter: blur(1px);
+    z-index: 1;
+    opacity:1;
+    will-change: transform;
+}
+.rings{
+    position: absolute;
+    width: 1100px;
+    height: 1270px;
+    top: -59%;
+    left: 26.7%;
     filter: blur(1px);
     z-index: 0;
     will-change: transform;
@@ -1127,6 +1309,11 @@
     stroke-width: 1.5;
     z-index: 1;
 }
+.vp-container {
+    position: relative;
+    width: 100vw;
+    min-height: 50vh;
+}
 .main-title2 {
     position: absolute;
     justify-content: center;
@@ -1166,8 +1353,8 @@
 }
 .vertical{
     position: absolute;
-    height: 350px;
-    top: 13%; 
+    height: 310px;
+    top: 20%; 
     left: 28.5%;
     border: 1px solid #FFFFFF;
 }
@@ -1175,19 +1362,28 @@
     width: 100px;
     height: auto;
     position: absolute;
-    top: 13%;
+    top: 20%;
     left: 1.5%;
 }
+.ellipse ellipse,
+    .ellipse1 ellipse,
+    .ellipse2 ellipse,
+    .ellipse3 ellipse,
+    .ellipse4 ellipse,
+    .ellipse5 ellipse {
+        rx: 4;
+        ry: 4;
+    }
 .ellipse{
     position: absolute;
-    top: 14.5%;
+    top: 22%;
     left: 27.5%;
     height: 10px;
     width: 10px;
 }
 .ellipse1{
     position: absolute;
-    top: 28.5%;
+    top: 40%;
     left: 27.5%;
     height: 10px;
     width: 10px;
@@ -1196,33 +1392,33 @@
     position: absolute;
     width: 100px;
     height: auto;
-    top: 18%;
+    top: 27%;
     left: 32%;
 }
 .june-july{
     width: 110px;
     height: auto;
     position: absolute;
-    top: 27%;
+    top: 38%;
     left: 30.5%;
 }
 .interview{
     position: absolute;
     width: 100px;
     height: auto;
-    top: 33.5%;
+    top: 49%;
     left: 5%;
 }
 .july{
     width: 105px;
     height: auto;
     position: absolute;
-    top: 42%;
+    top: 60%;
     left: 1.5%;
 }
 .ellipse2{
     position: absolute;
-    top: 43.5%;
+    top: 62%;
     left: 27.5%;
     height: 10px;
     width: 10px;
@@ -1231,13 +1427,13 @@
     position: absolute;
     width: 100px;
     height: auto;
-    top: 46%;
+    top: 68%;
     left: 32%;
 }
 .vertical1{
     position: absolute;
-    height: 350px;
-    top: 13%; 
+    height: 320px;
+    top: 20%; 
     left: 74%;
     border: 1px solid #FFFFFF;
 }
@@ -1245,12 +1441,12 @@
     width: 100px;
     height: auto;
     position: absolute;
-    top: 13%;
+    top: 20%;
     left: 49%;
 }
 .ellipse3{
     position: absolute;
-    top: 14.5%;
+    top: 22%;
     left: 73%;
     height: 10px;
     width: 10px;
@@ -1259,7 +1455,7 @@
     position: absolute;
     width: 100px;
     height: auto;
-    top: 18%;
+    top: 27%;
     left: 77%;
     z-index:2;
 }
@@ -1267,12 +1463,12 @@
     width: 100px;
     height: auto;
     position: absolute;
-    top: 27%;
+    top: 38%;
     left: 75%;
 }
 .ellipse4{
     position: absolute;
-    top: 28.5%;
+    top: 40%;
     left: 73%;
     height: 10px;
     width: 10px;
@@ -1281,19 +1477,19 @@
     width: 100px;
     height: auto;
     position: absolute;
-    top: 42%;
-    left: 48%;
+    top: 60%;
+    left: 49%;
 }
 .interview2{
     position: absolute;
     width: 100px;
     height: auto;
-    top: 33.5%;
+    top: 49%;
     left: 50%;
 }
 .ellipse5{
     position: absolute;
-    top: 43.4%;
+    top: 62%;
     left: 73%;
     height: 10px;
     width: 10px;
@@ -1302,7 +1498,7 @@
     position: absolute;
     width: 100px;
     height: auto;
-    top: 46%;
+    top: 68%;
     left: 77%;
 }
 .secondplanet{
@@ -1320,11 +1516,23 @@
     position: absolute;
     width: 500px;
     height: 500px;
-    top: -16.5%;
+    top: -33%;
     left: -7%;
     filter: blur(1px);
-    z-index: 0;
+    z-index: 1;
     will-change: transform;
      
+}
+}
+@media(max-width: 390px){
+   .rings{
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    top: -46%;
+    left: -15%;
+    filter: blur(1px);
+    z-index: 1;
+    will-change: transform;
 }
 }

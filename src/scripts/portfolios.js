@@ -6,3 +6,26 @@ if (window.innerWidth <= 393) {
     el.setAttribute('ry', 4);
   });
 }
+
+// Touch tap to toggle circle info on mobile
+const circles = document.querySelectorAll('.neon-circle');
+
+circles.forEach(circle => {
+    circle.addEventListener('click', function () {
+        // Close all other circles first
+        circles.forEach(other => {
+            if (other !== circle) {
+                other.classList.remove('tapped');
+            }
+        });
+        // Toggle this circle
+        this.classList.toggle('tapped');
+    });
+});
+
+// Close circle if tapping outside
+document.addEventListener('click', function (e) {
+    if (!e.target.closest('.neon-circle')) {
+        circles.forEach(circle => circle.classList.remove('tapped'));
+    }
+});

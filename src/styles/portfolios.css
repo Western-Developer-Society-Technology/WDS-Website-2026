@@ -827,7 +827,7 @@
 }
 .vertical{
     position: absolute;
-    height: 700px;
+    height: 630px;
     top: 10%; 
     left: 30%;
     border: 1px solid #FFFFFF;
@@ -909,7 +909,7 @@
 }
 .vertical1{
     position: absolute;
-    height: 700px;
+    height: 630px;
     top: 10%; 
     left: 70%;
     border: 1px solid #FFFFFF;
@@ -2537,7 +2537,7 @@
     width: 430px;
     height: 550px;
     top: -30%;
-    left: -23%;
+    left: -28%;
     filter: blur(1px);
     z-index: 1;
 }

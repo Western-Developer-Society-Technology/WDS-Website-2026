@@ -2098,8 +2098,20 @@
 
 .neon-line {
     display: none;
-    }
+}
 .neon-line2{
+    display: none;
+}
+.neon-line2 {
+    display: none;
+}
+.neon-line3 {
+    display: none;
+}
+.neon-line4{
+    display: none;
+}
+.neon-line5{
     position: absolute;
     top: 0;
     left: 0;
@@ -2108,16 +2120,7 @@
     z-index: 1;
     pointer-events: none;
 }
-.neon-line {
-    display: none;
-}
-.neon-line2 {
-    display: block;
-}
-.neon-line3 {
-    display: none;
-}
-.connector2{
+.connector5{
     stroke: rgba(255, 255, 255, 0.7);
     stroke-width: 1.5;
     z-index: 1;
@@ -2176,7 +2179,7 @@
     height: auto;
     position: absolute;
     top: 20%;
-    left: 1.5%;
+    left: 5%;
 }
 .ellipse ellipse,
     .ellipse1 ellipse,
@@ -2220,14 +2223,14 @@
     width: 100px;
     height: auto;
     top: 49%;
-    left: 5%;
+    left: 7%;
 }
 .july{
     width: 105px;
     height: auto;
     position: absolute;
     top: 60%;
-    left: 1.5%;
+    left: 5%;
 }
 .ellipse2{
     position: absolute;
@@ -2255,7 +2258,7 @@
     height: auto;
     position: absolute;
     top: 20%;
-    left: 49%;
+    left: 52%;
 }
 .ellipse3{
     position: absolute;
@@ -2291,14 +2294,14 @@
     height: auto;
     position: absolute;
     top: 60%;
-    left: 49%;
+    left: 52%;
 }
 .interview2{
     position: absolute;
     width: 100px;
     height: auto;
     top: 49%;
-    left: 50%;
+    left: 53%;
 }
 .ellipse5{
     position: absolute;
@@ -2329,8 +2332,8 @@
     position: absolute;
     width: 500px;
     height: 500px;
-    top: -33%;
-    left: -7%;
+    top: -20%;
+    left: 2%;
     filter: blur(1px);
     z-index: 1;
     will-change: transform;

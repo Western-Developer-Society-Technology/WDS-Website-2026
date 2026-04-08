@@ -5,7 +5,6 @@
     min-height: calc(100vh - 80px); /* Adjusts for header */
     display: flex;
     align-items: center;
-    background: lime !important;
 }
 
 /* Background Planet */
@@ -2395,7 +2394,7 @@
     height: auto;
     position: absolute;
     top: 20%;
-    left: -1%;
+    left: 2%;
 }
 .ellipse ellipse,
     .ellipse1 ellipse,
@@ -2446,7 +2445,7 @@
     height: auto;
     position: absolute;
     top: 65%;
-    left: -1%;
+    left: 2%;
 }
 .ellipse2{
     position: absolute;

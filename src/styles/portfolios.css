@@ -5,6 +5,7 @@
     min-height: calc(100vh - 80px); /* Adjusts for header */
     display: flex;
     align-items: center;
+    background: lime !important;
 }
 
 /* Background Planet */
@@ -2542,6 +2543,7 @@
     z-index: 1;
 }
 }
+/*
 @media (max-width: 375px){
 .neon-line {
     display: none;
@@ -2763,7 +2765,10 @@
     filter: blur(1px);
     z-index: 1;
 }  
-}
+} */
+
+
+/*
 @media (max-width: 320px){
 .neon-line {
     display: none;
@@ -2985,7 +2990,7 @@
     filter: blur(1px);
     z-index: 1;
 }  
-}
+} */
 
 
 

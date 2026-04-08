@@ -652,6 +652,8 @@
     left: 73%;
 }
 .secondplanet{
+    display: none;
+    /*
    position: absolute;
     width: 220px;
     height: 220px;
@@ -661,8 +663,11 @@
     z-index: 1;
     opacity:1;
     will-change: transform;
+    */
 }
 .rings{
+    display: none;
+    /*
     position: absolute;
     width: 1100px;
     height: 1270px;
@@ -671,7 +676,7 @@
     filter: blur(1px);
     z-index: 1;
     will-change: transform;
-     
+     */
 }
 }
 @media (min-width: 1440px) {
@@ -988,8 +993,10 @@
     z-index: 1;
     opacity:1;
     will-change: transform;
+    
 }
 .rings{
+    
     position: absolute;
     width: 1100px;
     height: 1270px;
@@ -997,7 +1004,6 @@
     left: 26.3%;
     filter: blur(1px);
     z-index: 1;
-     
 }   
 }
 @media (min-width: 1660px){
@@ -1330,6 +1336,336 @@
     min-height: 100vh;
     z-index:0;
 }
+}
+@media(min-width: 2560px){
+.purpleplanet {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 4%;
+    left: 8%;
+    opacity: 0.8;
+    filter: blur(4px);
+    z-index: 0;
+}
+.main-title {
+    position: absolute;
+    justify-content: center;
+    top: 3vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 5rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.neon-circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgb(166, 166, 166);
+    border: 1.5px solid rgba(250, 252, 255, 1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 
+        width 0.4s ease,
+        height 0.4s ease,
+        border-radius 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.neon-circle p{
+    font-family: 'Bellefair';
+    font-size: 2rem;
+}
+
+/* Circle positions — adjust percentages to match your design */
+.neon-circle4 { top: 50%; left: 50%; }        /* INTERNALS — center */
+.neon-circle1 { top: 25%; left: 36%; }         /* DEVELOPMENT — top left */
+.neon-circle2 { top: 52%; left: 27%; }         /* TECHNOLOGY — mid left */
+.neon-circle3 { top: 78%; left: 36%; }         /* FINANCE — bottom left */
+.neon-circle5 { top: 78%; left: 64%; }         /* MARKETING — bottom right */
+.neon-circle6 { top: 52%; left: 77%; }         /* CAREERS — mid right */
+.neon-circle7 { top: 25%; left: 63%; }         /* EXTERNALS — top right */
+
+.neon-line{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.connector{
+    stroke: rgba(255, 255, 255, 0.7);
+    stroke-width: 1.5;
+    z-index: 1;
+}
+
+/* The hidden info text */
+.circle-info {
+    display: none;
+    margin-top: 4px;
+    font-family: 'Bellefair';
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: rgba(5, 5, 5, 0.85);
+    line-height: 1.4;
+}
+/* Hover state — circle expands into rounded rectangle */
+.neon-circle:hover {
+    width: 430px;
+    height: 430px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
+    border-color: rgba(251, 253, 255, 0.9);
+    z-index: 10;
+    justify-content: center;
+}
+
+/* Hover state- display info */
+.neon-circle:hover .circle-info {
+    display: flex;
+}
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    overflow: clip;
+}
+
+/* Timeline Title */
+.main-title2 {
+    position: absolute;
+    justify-content: center;
+    top: 1vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 5rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+
+.vp-title p{
+    position: absolute;
+    top: 6vh; 
+    left: 30%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.vertical{
+    position: absolute;
+    height: 970px;
+    top: 13%; 
+    left: 30%;
+    border: 1px solid #FFFFFF;
+}
+.may-june{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 13%;
+    left: 14%;
+}
+.ellipse{
+    position: absolute;
+    top: -9%;
+    left: 12.4%;
+    height: 900px;
+    width: 900px;
+}
+.ellipse1{
+    position: absolute;
+    top: 11%;
+    left: 12.4%;
+    height: 900px;
+    width: 900px;
+}
+.applications{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 22%;
+    left: 32%;
+}
+.june-july{
+    width: 390px;
+    height: auto;
+    position: absolute;
+    top: 33%;
+    left: 30.5%;
+}
+.interview{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 41%;
+    left: 16%;
+}
+.july{
+    width: 390px;
+    height: auto;
+    position: absolute;
+    top: 53%;
+    left: 14%;
+}
+.ellipse2{
+    position: absolute;
+    top: 31%;
+    left: 12.4%;
+    height: 900px;
+    width: 900px;
+}
+.acceptance{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 58%;
+    left: 32%;
+}
+.director-title p{
+    position: absolute;
+    top: 5vh; 
+    left: 70%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.vertical1{
+    position: absolute;
+    height: 970px;
+    top: 13%; 
+    left: 70%;
+    border: 1px solid #FFFFFF;
+}
+.may-june2{
+    width: 390px;
+    height: auto;
+    position: absolute;
+    top: 13%;
+    left: 55%;
+}
+.ellipse3{
+    position: absolute;
+    top: -9%;
+    left: 52.4%;
+    height: 900px;
+    width: 900px;
+}
+.applications2{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 22%;
+    left: 72%;
+    z-index:2;
+}
+.june-july2{
+    width: 390px;
+    height: auto;
+    position: absolute;
+    top: 35%;
+    left: 71%;
+}
+.ellipse4{
+    position: absolute;
+    top: 38%;
+    left: 69.7%;
+    height: 18px;
+    width: 18px;
+}
+.july2{
+    width: 390px;
+    height: auto;
+    position: absolute;
+    top: 52%;
+    left: 55%;
+}
+.interview2{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 41%;
+    left: 57%;
+}
+.ellipse5{
+    position: absolute;
+    top: 54.5%;
+    left: 69.7%;
+    height: 18px;
+    width: 18px;
+}
+.acceptance2{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 58%;
+    left: 72%;
+}
+.secondplanet{
+    display: none;
+   /*position: absolute;
+    width: 220px;
+    height: 220px;
+    top: 2%;
+    left: 83%;
+    filter: blur(1px);
+    z-index: 1;
+    opacity:1;
+    will-change: transform;*/
+}
+.rings{
+    display: none;
+    /*position: absolute;
+    width: 1100px;
+    height: 1270px;
+    top: -27%;
+    left: 56%;
+    filter: blur(1px);
+    z-index: 1;
+    will-change: transform;*/
+     
+}   
+.vp-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    z-index:0;
+} 
 }
 @media(max-width: 768px){
 .purpleplanet {
@@ -2542,7 +2878,6 @@
     z-index: 1;
 }
 }
-/*
 @media (max-width: 375px){
 .neon-line {
     display: none;
@@ -2764,10 +3099,7 @@
     filter: blur(1px);
     z-index: 1;
 }  
-} */
-
-
-/*
+} 
 @media (max-width: 320px){
 .neon-line {
     display: none;
@@ -2989,7 +3321,7 @@
     filter: blur(1px);
     z-index: 1;
 }  
-} */
+} 
 
 
 

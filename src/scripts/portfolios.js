@@ -6,6 +6,14 @@ if (window.innerWidth <= 393) {
     el.setAttribute('ry', 4);
   });
 }
+if (window.innerWidth <= 480) {
+  document.querySelectorAll(
+    '.ellipse ellipse, .ellipse1 ellipse, .ellipse2 ellipse, .ellipse3 ellipse, .ellipse4 ellipse, .ellipse5 ellipse'
+  ).forEach(el => {
+    el.setAttribute('rx', 4);
+    el.setAttribute('ry', 4);
+  });
+}
 
 // Touch tap to toggle circle info on mobile
 const circles = document.querySelectorAll('.neon-circle');

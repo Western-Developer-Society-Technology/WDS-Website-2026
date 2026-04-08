@@ -2332,8 +2332,8 @@
     position: absolute;
     width: 500px;
     height: 500px;
-    top: -20%;
-    left: 2%;
+    top: -23%;
+    left: 5%;
     filter: blur(1px);
     z-index: 1;
     will-change: transform;

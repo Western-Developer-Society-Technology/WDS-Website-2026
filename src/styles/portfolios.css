@@ -2473,7 +2473,7 @@
     height: auto;
     position: absolute;
     top: 20%;
-    left: 47%;
+    left: 49%;
 }
 .ellipse3{
     position: absolute;
@@ -2509,14 +2509,14 @@
     height: auto;
     position: absolute;
     top: 65%;
-    left: 47%;
+    left: 49%;
 }
 .interview2{
     position: absolute;
     width: 88px;
     height: auto;
     top: 52%;
-    left: 49%;
+    left: 50%;
 }
 .ellipse5{
     position: absolute;
@@ -2537,7 +2537,7 @@
     width: 430px;
     height: 550px;
     top: -30%;
-    left: -27%;
+    left: -23%;
     filter: blur(1px);
     z-index: 1;
 }

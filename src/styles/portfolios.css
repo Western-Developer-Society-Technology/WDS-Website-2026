@@ -2329,15 +2329,17 @@
     will-change: transform;
 }
 .rings{
+    display:none;
+    /*
     position: absolute;
     width: 500px;
     height: 500px;
     top: -23%;
-    left: 2%;
+    left: 0%;
     filter: blur(1px);
     z-index: 1;
     will-change: transform;
-     
+     */
 }
 }
 @media(max-width: 425px){

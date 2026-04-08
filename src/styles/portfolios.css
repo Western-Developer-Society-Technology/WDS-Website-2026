@@ -2542,6 +2542,7 @@
     z-index: 1;
 }
 }
+/*
 @media (max-width: 375px){
 .neon-line {
     display: none;
@@ -2763,7 +2764,10 @@
     filter: blur(1px);
     z-index: 1;
 }  
-}
+} */
+
+
+/*
 @media (max-width: 320px){
 .neon-line {
     display: none;
@@ -2985,7 +2989,7 @@
     filter: blur(1px);
     z-index: 1;
 }  
-}
+} */
 
 
 

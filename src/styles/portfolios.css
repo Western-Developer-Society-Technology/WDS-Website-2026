@@ -1418,22 +1418,36 @@
     position: absolute;
     justify-content: center;
     top: 3vh; 
-    left: 50%;
+    left: 52%;
     white-space: nowrap;
     transform: translateX(-50%);
     font-family: 'Bellefair';
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
+}
+.hover{
+    position: absolute;
+    justify-content: center;
+    top: 12vh; 
+    left: 52%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
 }
 .tap{
     display:none;
 }
 .neon-circle {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background: rgb(166, 166, 166);
     border: 1.5px solid rgba(250, 252, 255, 1);
@@ -1458,19 +1472,40 @@
 }
 .neon-circle p{
     font-family: 'Bellefair';
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 /* Circle positions — adjust percentages to match your design */
-.neon-circle4 { top: 50%; left: 50%; }        /* INTERNALS — center */
-.neon-circle1 { top: 25%; left: 36%; }         /* DEVELOPMENT — top left */
-.neon-circle2 { top: 52%; left: 27%; }         /* TECHNOLOGY — mid left */
-.neon-circle3 { top: 78%; left: 36%; }         /* FINANCE — bottom left */
-.neon-circle5 { top: 78%; left: 64%; }         /* MARKETING — bottom right */
-.neon-circle6 { top: 52%; left: 77%; }         /* CAREERS — mid right */
-.neon-circle7 { top: 25%; left: 63%; }         /* EXTERNALS — top right */
+.neon-circle4 { top: 58%; left: 51%; }        /* INTERNALS — center */
+.neon-circle1 { top: 30%; left: 38%; }         /* DEVELOPMENT — top left */
+.neon-circle2 { top: 60%; left: 25%; }         /* TECHNOLOGY — mid left */
+.neon-circle3 { top: 84%; left: 38%; }         /* FINANCE — bottom left */
+.neon-circle5 { top: 84%; left: 64%; }         /* MARKETING — bottom right */
+.neon-circle6 { top: 60%; left: 77%; }         /* CAREERS — mid right */
+.neon-circle7 { top: 30%; left: 65%; }         /* EXTERNALS — top right */
 
 .neon-line{
+    display:none;
+}
+.neon-line1{
+    display: none;
+}
+.neon-line2{
+    display:none;
+}
+.neon-line3{
+    display: none;
+}
+.neon-line4{
+    display: none;
+}
+.neon-line5{
+    display: none;
+}
+.neon-line6{
+    display: none;
+}
+.neon-line7{
     position: absolute;
     top: 0;
     left: 0;
@@ -1480,7 +1515,7 @@
     pointer-events: none;
 }
 
-.connector{
+.connector7{
     stroke: rgba(255, 255, 255, 0.7);
     stroke-width: 1.5;
     z-index: 1;
@@ -1498,8 +1533,8 @@
 }
 /* Hover state — circle expands into rounded rectangle */
 .neon-circle:hover {
-    width: 430px;
-    height: 430px;
+    width: 340px;
+    height: 340px;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
     border-color: rgba(251, 253, 255, 0.9);
@@ -1529,12 +1564,12 @@
 .main-title2 {
     position: absolute;
     justify-content: center;
-    top: 1vh; 
+    top: 1.2vh; 
     left: 50%;
     white-space: nowrap;
     transform: translateX(-50%);
     font-family: 'Bellefair';
-    font-size: 5rem;
+    font-size: 4.6rem;
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
@@ -1547,35 +1582,35 @@
     white-space: nowrap;
     transform: translateX(-50%);
     font-family: 'Bellefair';
-    font-size: 3.5rem;
+    font-size: 3.4rem;
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
 }
 .vertical{
     position: absolute;
-    height: 970px;
+    height: 920px;
     top: 13%; 
     left: 30%;
     border: 1px solid #FFFFFF;
 }
 .may-june{
-    width: 400px;
+    width: 340px;
     height: auto;
     position: absolute;
     top: 13%;
-    left: 14%;
+    left: 17%;
 }
 .ellipse{
     position: absolute;
-    top: -9%;
+    top: -24%;
     left: 12.4%;
     height: 900px;
     width: 900px;
 }
 .ellipse1{
     position: absolute;
-    top: 11%;
+    top: 1%;
     left: 12.4%;
     height: 900px;
     width: 900px;
@@ -1588,29 +1623,29 @@
     left: 32%;
 }
 .june-july{
-    width: 390px;
+    width: 340px;
     height: auto;
     position: absolute;
-    top: 33%;
+    top: 38%;
     left: 30.5%;
 }
 .interview{
     position: absolute;
     width: 350px;
     height: auto;
-    top: 41%;
-    left: 16%;
+    top: 52%;
+    left: 17.5%;
 }
 .july{
-    width: 390px;
+    width: 340px;
     height: auto;
     position: absolute;
-    top: 53%;
-    left: 14%;
+    top: 69%;
+    left: 17%;
 }
 .ellipse2{
     position: absolute;
-    top: 31%;
+    top: 32%;
     left: 12.4%;
     height: 900px;
     width: 900px;
@@ -1619,7 +1654,7 @@
     position: absolute;
     width: 350px;
     height: auto;
-    top: 58%;
+    top: 79%;
     left: 32%;
 }
 .director-title p{
@@ -1629,28 +1664,28 @@
     white-space: nowrap;
     transform: translateX(-50%);
     font-family: 'Bellefair';
-    font-size: 3.5rem;
+    font-size: 3.4rem;
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
 }
 .vertical1{
     position: absolute;
-    height: 970px;
+    height: 920px;
     top: 13%; 
     left: 70%;
     border: 1px solid #FFFFFF;
 }
 .may-june2{
-    width: 390px;
+    width: 340px;
     height: auto;
     position: absolute;
     top: 13%;
-    left: 55%;
+    left: 57%;
 }
 .ellipse3{
     position: absolute;
-    top: -9%;
+    top: -24%;
     left: 52.4%;
     height: 900px;
     width: 900px;
@@ -1664,36 +1699,36 @@
     z-index:2;
 }
 .june-july2{
-    width: 390px;
+    width: 340px;
     height: auto;
     position: absolute;
-    top: 35%;
+    top: 38%;
     left: 71%;
 }
 .ellipse4{
     position: absolute;
-    top: 38%;
+    top: 42%;
     left: 69.7%;
     height: 18px;
     width: 18px;
 }
 .july2{
-    width: 390px;
+    width: 340px;
     height: auto;
     position: absolute;
-    top: 52%;
-    left: 55%;
+    top: 69%;
+    left: 57%;
 }
 .interview2{
     position: absolute;
     width: 350px;
     height: auto;
-    top: 41%;
+    top: 52%;
     left: 57%;
 }
 .ellipse5{
     position: absolute;
-    top: 54.5%;
+    top: 73%;
     left: 69.7%;
     height: 18px;
     width: 18px;
@@ -1702,7 +1737,7 @@
     position: absolute;
     width: 350px;
     height: auto;
-    top: 58%;
+    top: 78%;
     left: 72%;
 }
 .secondplanet{
@@ -3011,7 +3046,7 @@
     position: absolute;
     width: 430px;
     height: 550px;
-    top: -48%;
+    top: -46%;
     left: 0%;
     filter: blur(1px);
     z-index: 1;
@@ -3241,13 +3276,14 @@
     left: 77%;
 }
 .rings{
-    position: absolute;
+    display:none;
+    /*position: absolute;
     width: 480px;
     height: 540px;
     top: -25%;
     left: -14%;
     filter: blur(1px);
-    z-index: 1;
+    z-index: 1;*/
 }  
 } 
 @media (max-width: 320px){

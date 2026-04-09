@@ -17,7 +17,8 @@ if (window.innerWidth <= 480) {
 
 // Touch tap to toggle circle info — MOBILE ONLY
 
-if (window.innerWidth <= 768) {
+
+if (window.innerWidth <= 1180) {
     const circles = document.querySelectorAll('.neon-circle');
 
     circles.forEach(circle => {

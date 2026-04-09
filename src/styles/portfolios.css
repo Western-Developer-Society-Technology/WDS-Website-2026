@@ -515,7 +515,7 @@
 }
 .vertical{
     position: absolute;
-    height: 700px;
+    height: 600px;
     top: 10%; 
     left: 30%;
     border: 1px solid #FFFFFF;
@@ -525,19 +525,19 @@
     height: auto;
     position: absolute;
     top: 10%;
-    left: 8%;
+    left: 12%;
 }
 .ellipse{
     position: absolute;
     top: 13%;
-    left: 29.2%;
+    left: 29.3%;
     height: 18px;
     width: 18px;
 }
 .ellipse1{
     position: absolute;
-    top: 39%;
-    left: 29.2%;
+    top: 41%;
+    left: 29.3%;
     height: 18px;
     width: 18px;
 }
@@ -546,28 +546,28 @@
     width: 200px;
     height: auto;
     top: 22%;
-    left: 33%;
+    left: 32%;
 }
 .june-july{
     width: 230px;
     height: auto;
     position: absolute;
-    top: 36%;
+    top: 38%;
     left: 30.5%;
 }
 .interview{
     position: absolute;
     width: 200px;
     height: auto;
-    top: 48%;
-    left: 12%;
+    top: 53%;
+    left: 15%;
 }
 .july{
     width: 230px;
     height: auto;
     position: absolute;
     top: 67%;
-    left: 8%;
+    left: 12%;
 }
 .ellipse2{
     position: absolute;
@@ -597,7 +597,7 @@
 }
 .vertical1{
     position: absolute;
-    height: 700px;
+    height: 600px;
     top: 10%; 
     left: 70%;
     border: 1px solid #FFFFFF;
@@ -607,12 +607,12 @@
     height: auto;
     position: absolute;
     top: 10%;
-    left: 48%;
+    left: 52%;
 }
 .ellipse3{
     position: absolute;
     top: 13%;
-    left: 69.2%;
+    left: 69.3%;
     height: 18px;
     width: 18px;
 }
@@ -621,20 +621,20 @@
     width: 200px;
     height: auto;
     top: 22%;
-    left: 73%;
+    left: 72%;
     z-index:2;
 }
 .june-july2{
     width: 230px;
     height: auto;
     position: absolute;
-    top: 36%;
+    top: 38%;
     left: 71%;
 }
 .ellipse4{
     position: absolute;
-    top: 39%;
-    left: 69.2%;
+    top: 41%;
+    left: 69.3%;
     height: 18px;
     width: 18px;
 }
@@ -643,19 +643,19 @@
     height: auto;
     position: absolute;
     top: 67%;
-    left: 48%;
+    left: 52%;
 }
 .interview2{
     position: absolute;
     width: 200px;
     height: auto;
-    top: 48%;
-    left: 52%;
+    top: 53%;
+    left: 55%;
 }
 .ellipse5{
     position: absolute;
     top: 70%;
-    left: 69.2%;
+    left: 69.3%;
     height: 18px;
     width: 18px;
 }
@@ -664,11 +664,9 @@
     width: 200px;
     height: auto;
     top: 79%;
-    left: 73%;
+    left: 72%;
 }
 .secondplanet{
-    display: none;
-    /*
    position: absolute;
     width: 220px;
     height: 220px;
@@ -678,7 +676,6 @@
     z-index: 1;
     opacity:1;
     will-change: transform;
-    */
 }
 .rings{
     display: none;
@@ -1026,8 +1023,7 @@
     will-change: transform;
     
 }
-.rings{
-    
+.rings{ 
     position: absolute;
     width: 1100px;
     height: 1270px;
@@ -1372,8 +1368,7 @@
     left: 72%;
 }
 .secondplanet{
-    display: none;
-   /*position: absolute;
+    position: absolute;
     width: 220px;
     height: 220px;
     top: 2%;
@@ -1381,7 +1376,7 @@
     filter: blur(1px);
     z-index: 1;
     opacity:1;
-    will-change: transform;*/
+    will-change: transform;
 }
 .rings{
     display: none;
@@ -2109,6 +2104,8 @@
     will-change: transform;
 }
 .rings{
+    display: none;
+    /*
     position: absolute;
     width: 1000px;
     height: 1300px;
@@ -2116,7 +2113,7 @@
     left: -11%;
     filter: blur(1px);
     z-index: 0;
-    will-change: transform;
+    will-change: transform; */
      
 }
 }
@@ -2263,6 +2260,17 @@
     position: relative;
     width: 100vw;
     min-height: 50vh;
+}
+.timeline {
+    position: relative;
+    width: 100vw;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    overflow: clip;
 }
 .main-title2 {
     position: absolute;
@@ -2463,14 +2471,15 @@
     will-change: transform;
 }
 .rings{
-    position: absolute;
+    display: none;
+    /*position: absolute;
     width: 500px;
     height: 500px;
     top: -23%;
     left: -2%;
     filter: blur(1px);
     z-index: 1;
-    will-change: transform;
+    will-change: transform; */
      
 }
 }
@@ -2804,6 +2813,8 @@
     will-change: transform;
 }
 .rings{
+    display: none;
+    /*
     position: absolute;
     width: 460px;
     height: 590px;
@@ -2811,7 +2822,7 @@
     left: -1%;
     filter: blur(1px);
     z-index: 1;
-    will-change: transform;
+    will-change: transform; */
      
 }   
 }
@@ -2850,9 +2861,37 @@
 .hover{
     display: none;
 }
-.tap{
-
+.neon-line {
+    display: none;
 }
+.neon-line2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+.neon-line3 {
+    display: none;
+}
+.neon-line4{
+    display:none;
+}
+.neon-line5{
+    display:none;
+}
+.neon-line6{
+    display:none;
+}
+
+.connector2{
+    stroke: rgba(255, 255, 255, 0.7);
+    stroke-width: 1.5;
+    z-index: 1;
+}
+
 .main-title2 {
     position: absolute;
     justify-content: center;
@@ -2901,8 +2940,8 @@
     width: 93px;
     height: auto;
     position: absolute;
-    top: 20%;
-    left: 2%;
+    top: 23%;
+    left: 4%;
 }
 .ellipse ellipse,
     .ellipse1 ellipse,
@@ -2915,14 +2954,14 @@
     }
 .ellipse{
     position: absolute;
-    top: 22%;
+    top: 25%;
     left: 27.5%;
     height: 10px;
     width: 10px;
 }
 .ellipse1{
     position: absolute;
-    top: 44%;
+    top: 46%;
     left: 27.5%;
     height: 10px;
     width: 10px;
@@ -2931,33 +2970,33 @@
     position: absolute;
     width: 88px;
     height: auto;
-    top: 30%;
-    left: 34%;
+    top: 32%;
+    left: 33%;
 }
 .june-july{
     width: 93px;
     height: auto;
     position: absolute;
-    top: 42%;
+    top: 44%;
     left: 30.5%;
 }
 .interview{
     position: absolute;
     width: 88px;
     height: auto;
-    top: 52%;
-    left: 3%;
+    top: 53%;
+    left: 6%;
 }
 .july{
     width: 93px;
     height: auto;
     position: absolute;
-    top: 65%;
-    left: 2%;
+    top: 69%;
+    left: 4%;
 }
 .ellipse2{
     position: absolute;
-    top: 67%;
+    top: 71%;
     left: 27.5%;
     height: 10px;
     width: 10px;
@@ -2966,7 +3005,7 @@
     position: absolute;
     width: 88px;
     height: auto;
-    top: 77%;
+    top: 78%;
     left: 32%;
 }
 .vertical1{
@@ -2980,12 +3019,12 @@
     width: 93px;
     height: auto;
     position: absolute;
-    top: 20%;
+    top: 23%;
     left: 49%;
 }
 .ellipse3{
     position: absolute;
-    top: 22%;
+    top: 25%;
     left: 73%;
     height: 10px;
     width: 10px;
@@ -2994,7 +3033,7 @@
     position: absolute;
     width: 88px;
     height: auto;
-    top: 29%;
+    top: 32%;
     left: 77%;
     z-index:2;
 }
@@ -3002,12 +3041,12 @@
     width: 93px;
     height: auto;
     position: absolute;
-    top: 42%;
+    top: 44%;
     left: 75%;
 }
 .ellipse4{
     position: absolute;
-    top: 44%;
+    top: 45%;
     left: 73%;
     height: 10px;
     width: 10px;
@@ -3016,19 +3055,19 @@
     width: 93px;
     height: auto;
     position: absolute;
-    top: 65%;
+    top: 69%;
     left: 49%;
 }
 .interview2{
     position: absolute;
     width: 88px;
     height: auto;
-    top: 52%;
-    left: 50%;
+    top: 53%;
+    left: 52%;
 }
 .ellipse5{
     position: absolute;
-    top: 67%;
+    top: 71%;
     left: 73%;
     height: 10px;
     width: 10px;
@@ -3037,17 +3076,19 @@
     position: absolute;
     width: 88px;
     height: auto;
-    top: 77%;
+    top: 78%;
     left: 77%;
 }
 .rings{
+    display:none;
+    /*
     position: absolute;
     width: 430px;
     height: 550px;
     top: -46%;
     left: 0%;
     filter: blur(1px);
-    z-index: 1;
+    z-index: 1; */
 }
 .timeline {
     position: relative;
@@ -3080,6 +3121,91 @@
     stroke-width: 1.5;
     z-index: 1;
 }
+.main-title {
+    position: absolute;
+    justify-content: center;
+    top: 1vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.tap{
+    position: absolute;
+    justify-content: center;
+    top: 5.1vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.neon-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgb(166, 166, 166);
+    border: 1.5px solid rgba(250, 252, 255, 1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 
+        width 0.4s ease,
+        height 0.4s ease,
+        border-radius 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.neon-circle p{
+    font-family: 'Bellefair';
+    font-size: 0.6rem; 
+}
+
+/* The hidden info text */
+.circle-info{
+    display: none;
+    margin-top: 4px;
+    font-family: 'Bellefair';
+    font-weight: 300;
+    color: rgba(5, 5, 5, 0.85);
+    line-height: 1.4;
+}
+.circle-info p{
+    font-size: 0.5rem;
+}
+/* Hover state — circle expands into rounded rectangle */
+.neon-circle:hover {
+    width: 120px;
+    height: 122px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
+    border-color: rgba(251, 253, 255, 0.9);
+    z-index: 10;
+    justify-content: center;
+}
+
+/* Hover state- display info */ 
+.neon-circle:hover .circle-info {
+    display: flex;
+    font-size: 0.3rem;
+}
 
 .vp-container {
     position: relative;
@@ -3125,8 +3251,8 @@
 }
 .vertical{
     position: absolute;
-    height: 310px;
-    top: 20%; 
+    height: 260px;
+    top: 22%; 
     left: 28.5%;
     border: 1px solid #FFFFFF;
 }
@@ -3134,7 +3260,7 @@
     width: 93px;
     height: auto;
     position: absolute;
-    top: 20%;
+    top: 22%;
     left: 3%;
 }
 .ellipse ellipse,
@@ -3148,14 +3274,14 @@
     }
 .ellipse{
     position: absolute;
-    top: 22%;
+    top: 24%;
     left: 27.4%;
     height: 10px;
     width: 10px;
 }
 .ellipse1{
     position: absolute;
-    top: 44%;
+    top: 49%;
     left: 27.4%;
     height: 10px;
     width: 10px;
@@ -3165,32 +3291,32 @@
     width: 88px;
     height: auto;
     top: 30%;
-    left: 34%;
+    left: 32%;
 }
 .june-july{
     width: 93px;
     height: auto;
     position: absolute;
-    top: 42%;
-    left: 30.5%;
+    top: 46%;
+    left: 30%;
 }
 .interview{
     position: absolute;
     width: 88px;
     height: auto;
-    top: 52%;
+    top: 55%;
     left: 6%;
 }
 .july{
     width: 93px;
     height: auto;
     position: absolute;
-    top: 65%;
+    top: 73%;
     left: 3%;
 }
 .ellipse2{
     position: absolute;
-    top: 67%;
+    top: 76%;
     left: 27.4%;
     height: 10px;
     width: 10px;
@@ -3199,13 +3325,13 @@
     position: absolute;
     width: 88px;
     height: auto;
-    top: 77%;
-    left: 32%;
+    top: 82%;
+    left: 31%;
 }
 .vertical1{
     position: absolute;
-    height: 310px;
-    top: 20%; 
+    height: 260px;
+    top: 22%; 
     left: 74%;
     border: 1px solid #FFFFFF;
 }
@@ -3213,12 +3339,12 @@
     width: 93px;
     height: auto;
     position: absolute;
-    top: 20%;
-    left: 48%;
+    top: 22%;
+    left: 49%;
 }
 .ellipse3{
     position: absolute;
-    top: 22%;
+    top: 24%;
     left: 73%;
     height: 10px;
     width: 10px;
@@ -3227,7 +3353,7 @@
     position: absolute;
     width: 88px;
     height: auto;
-    top: 29%;
+    top: 30%;
     left: 77%;
     z-index:2;
 }
@@ -3235,12 +3361,12 @@
     width: 93px;
     height: auto;
     position: absolute;
-    top: 42%;
+    top: 46%;
     left: 74%;
 }
 .ellipse4{
     position: absolute;
-    top: 44%;
+    top: 49%;
     left: 73%;
     height: 10px;
     width: 10px;
@@ -3249,19 +3375,19 @@
     width: 93px;
     height: auto;
     position: absolute;
-    top: 65%;
-    left: 48%;
+    top: 73%;
+    left: 50%;
 }
 .interview2{
     position: absolute;
     width: 88px;
     height: auto;
-    top: 52%;
-    left: 51%;
+    top: 55%;
+    left: 52%;
 }
 .ellipse5{
     position: absolute;
-    top: 67%;
+    top: 76%;
     left: 73%;
     height: 10px;
     width: 10px;
@@ -3270,7 +3396,7 @@
     position: absolute;
     width: 88px;
     height: auto;
-    top: 77%;
+    top: 82%;
     left: 77%;
 }
 .rings{
@@ -3284,7 +3410,7 @@
     z-index: 1;*/
 }  
 } 
-@media (max-width: 320px){
+@media (max-width: 320px){ 
 .neon-line {
     display: none;
 }
@@ -3304,6 +3430,86 @@
     z-index: 1;
 }
 
+.main-title {
+    position: absolute;
+    justify-content: center;
+    top: -0.8vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.tap{
+    position: absolute;
+    justify-content: center;
+    top: 3.7vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.neon-circle {
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background: rgb(166, 166, 166);
+    border: 1.5px solid rgba(250, 252, 255, 1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 
+        width 0.4s ease,
+        height 0.4s ease,
+        border-radius 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.neon-circle p{
+    font-family: 'Bellefair';
+    font-size: 0.6rem; 
+}
+
+/* The hidden info text */
+.circle-info{
+    display: none;
+    margin-top: 4px;
+    font-family: 'Bellefair';
+    font-weight: 300;
+    color: rgba(5, 5, 5, 0.85);
+    line-height: 1.4;
+}
+.circle-info p{
+    font-size: 0.4rem;
+}
+/* Hover state — circle expands into rounded rectangle */
+.neon-circle:hover {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
+    border-color: rgba(251, 253, 255, 0.9);
+    z-index: 10;
+    justify-content: center;
+}
+
 .vp-container {
     position: relative;
     width: 100vw;
@@ -3312,53 +3518,53 @@
 .main-title2 {
     position: absolute;
     justify-content: center;
-    top: 9vh; 
+    top: 10vh; 
     left: 50%;
     white-space: nowrap;
     transform: translateX(-50%);
     font-family: 'Bellefair';
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
 }
 .vp-title p{
     position: absolute;
-    top: 7vh; 
+    top: 5vh; 
     left: 28%;
     white-space: nowrap;
     transform: translateX(-50%);
     font-family: 'Bellefair';
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
 }
 .director-title p{
     position: absolute;
-    top: 7vh; 
+    top: 5vh; 
     left: 73%;
     white-space: nowrap;
     transform: translateX(-50%);
     font-family: 'Bellefair';
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
 }
 .vertical{
     position: absolute;
-    height: 310px;
+    height: 280px;
     top: 20%; 
     left: 28.5%;
     border: 1px solid #FFFFFF;
 }
 .may-june{
-    width: 93px;
+    width: 90px;
     height: auto;
     position: absolute;
-    top: 20%;
-    left: -1%;
+    top: 22%;
+    left: 1%;
 }
 .ellipse ellipse,
     .ellipse1 ellipse,
@@ -3371,14 +3577,14 @@
     }
 .ellipse{
     position: absolute;
-    top: 22%;
+    top: 25%;
     left: 27%;
     height: 10px;
     width: 10px;
 }
 .ellipse1{
     position: absolute;
-    top: 44%;
+    top: 53%;
     left: 27%;
     height: 10px;
     width: 10px;
@@ -3387,33 +3593,33 @@
     position: absolute;
     width: 88px;
     height: auto;
-    top: 30%;
-    left: 34%;
+    top: 33%;
+    left: 31%;
 }
 .june-july{
-    width: 93px;
+    width: 90px;
     height: auto;
     position: absolute;
-    top: 42%;
-    left: 30.5%;
+    top: 50%;
+    left: 28%;
 }
 .interview{
     position: absolute;
     width: 88px;
     height: auto;
-    top: 52%;
+    top: 62%;
     left: 3%;
 }
 .july{
-    width: 93px;
+    width: 90px;
     height: auto;
     position: absolute;
-    top: 65%;
-    left: -1%;
+    top: 80%;
+    left: 1%;
 }
 .ellipse2{
     position: absolute;
-    top: 67%;
+    top: 83%;
     left: 27%;
     height: 10px;
     width: 10px;
@@ -3422,26 +3628,26 @@
     position: absolute;
     width: 88px;
     height: auto;
-    top: 77%;
-    left: 32%;
+    top: 93%;
+    left: 31%;
 }
 .vertical1{
     position: absolute;
-    height: 310px;
+    height: 280px;
     top: 20%; 
     left: 74%;
     border: 1px solid #FFFFFF;
 }
 .may-june2{
-    width: 93px;
+    width: 90px;
     height: auto;
     position: absolute;
-    top: 20%;
-    left: 46%;
+    top: 22%;
+    left: 47%;
 }
 .ellipse3{
     position: absolute;
-    top: 22%;
+    top: 24%;
     left: 73%;
     height: 10px;
     width: 10px;
@@ -3450,41 +3656,41 @@
     position: absolute;
     width: 88px;
     height: auto;
-    top: 29%;
+    top: 33%;
     left: 77%;
     z-index:2;
 }
 .june-july2{
-    width: 93px;
+    width: 90px;
     height: auto;
     position: absolute;
-    top: 42%;
+    top: 50%;
     left: 74%;
 }
 .ellipse4{
     position: absolute;
-    top: 44%;
+    top: 53%;
     left: 73%;
     height: 10px;
     width: 10px;
 }
 .july2{
-    width: 93px;
+    width: 90px;
     height: auto;
     position: absolute;
-    top: 65%;
+    top: 80%;
     left: 45%;
 }
 .interview2{
     position: absolute;
     width: 88px;
     height: auto;
-    top: 52%;
-    left: 48%;
+    top: 62%;
+    left: 49%;
 }
 .ellipse5{
     position: absolute;
-    top: 67%;
+    top: 82%;
     left: 73%;
     height: 10px;
     width: 10px;
@@ -3493,7 +3699,7 @@
     position: absolute;
     width: 88px;
     height: auto;
-    top: 77%;
+    top: 93%;
     left: 77%;
 }
 .rings{

@@ -33,6 +33,7 @@
     color: #ffffff;
     z-index: 10;
 }
+
 /* Container holding all circles — use absolute positioning */
 
 .neon-container {
@@ -347,6 +348,8 @@
      
 }
 
+
+
 @media(min-width: 834px) and (max-width: 1180px){
  .portfolio {
     position: relative;
@@ -468,6 +471,9 @@
 }
 .neon-line6{
     display:none;
+}
+.neon-line7{
+    display: none;
 }
 .neon-line8{
     position: absolute;
@@ -761,12 +767,9 @@
     z-index: 10;
 }
 .tap{
-    display:none;
-}
-.hover{
     position: absolute;
     justify-content: center;
-    top: 9vh; 
+    top: vh; 
     left: 50%;
     white-space: nowrap;
     transform: translateX(-50%);
@@ -775,6 +778,9 @@
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
+}
+.hover{
+    display:none;
 }
 .neon-circle {
     position: absolute;
@@ -833,11 +839,29 @@
 .neon-line {
     display: none;
 }
+.neon-line1{
+    display:none;
+}
 .neon-line2 {
     display: none;
 }
 .neon-line3 {
     display: block;
+}
+.neon-line4{
+    display:none;
+}
+.neon-line5{
+    display:none;
+}
+.neon-line6{
+    display:none;
+}
+.neon-line7{
+    display:none;
+}
+.neon-line8{
+    display:none;
 }
 
 /* The hidden info text */
@@ -903,7 +927,7 @@
 }
 .vertical{
     position: absolute;
-    height: 600px;
+    height: 650px;
     top: 10%; 
     left: 30%;
     border: 1px solid #FFFFFF;
@@ -913,18 +937,18 @@
     height: auto;
     position: absolute;
     top: 10%;
-    left: 12%;
+    left: 8%;
 }
 .ellipse{
     position: absolute;
-    top: 13%;
+    top: 12%;
     left: 29.3%;
     height: 18px;
     width: 18px;
 }
 .ellipse1{
     position: absolute;
-    top: 41%;
+    top: 30%;
     left: 29.3%;
     height: 18px;
     width: 18px;
@@ -933,33 +957,33 @@
     position: absolute;
     width: 200px;
     height: auto;
-    top: 22%;
+    top: 15%;
     left: 32%;
 }
 .june-july{
     width: 230px;
     height: auto;
     position: absolute;
-    top: 38%;
+    top: 28%;
     left: 30.5%;
 }
 .interview{
     position: absolute;
     width: 200px;
     height: auto;
-    top: 53%;
-    left: 15%;
+    top: 33%;
+    left: 11%;
 }
 .july{
     width: 230px;
     height: auto;
     position: absolute;
-    top: 67%;
-    left: 12%;
+    top: 45%;
+    left: 8%;
 }
 .ellipse2{
     position: absolute;
-    top: 70%;
+    top: 47%;
     left: 29.2%;
     height: 18px;
     width: 18px;
@@ -968,7 +992,7 @@
     position: absolute;
     width: 200px;
     height: auto;
-    top: 79%;
+    top: 51%;
     left: 32%;
 }
 .director-title p{
@@ -995,11 +1019,11 @@
     height: auto;
     position: absolute;
     top: 10%;
-    left: 52%;
+    left: 48%;
 }
 .ellipse3{
     position: absolute;
-    top: 13%;
+    top: 12%;
     left: 69.3%;
     height: 18px;
     width: 18px;
@@ -1008,7 +1032,7 @@
     position: absolute;
     width: 200px;
     height: auto;
-    top: 22%;
+    top: 15%;
     left: 72%;
     z-index:2;
 }
@@ -1016,12 +1040,12 @@
     width: 230px;
     height: auto;
     position: absolute;
-    top: 38%;
+    top: 28%;
     left: 71%;
 }
 .ellipse4{
     position: absolute;
-    top: 41%;
+    top: 30%;
     left: 69.3%;
     height: 18px;
     width: 18px;
@@ -1030,19 +1054,19 @@
     width: 230px;
     height: auto;
     position: absolute;
-    top: 67%;
-    left: 52%;
+    top: 45%;
+    left: 48%;
 }
 .interview2{
     position: absolute;
     width: 200px;
     height: auto;
-    top: 53%;
-    left: 55%;
+    top: 33%;
+    left: 52%;
 }
 .ellipse5{
     position: absolute;
-    top: 70%;
+    top: 47%;
     left: 69.3%;
     height: 18px;
     width: 18px;
@@ -1051,7 +1075,7 @@
     position: absolute;
     width: 200px;
     height: auto;
-    top: 79%;
+    top: 51%;
     left: 72%;
 }
 .secondplanet{

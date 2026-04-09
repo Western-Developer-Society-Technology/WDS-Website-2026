@@ -347,7 +347,6 @@
      
 }
 
-
 @media (min-width: 1024px) {
 .purpleplanet {
     position: absolute;
@@ -1440,7 +1439,6 @@
     color: #ffffff;
     z-index: 10;
 }
-}
 .tap{
     display:none;
 }
@@ -1762,7 +1760,7 @@
     filter: blur(1px);
     z-index: 1;
     will-change: transform;*/
-     
+   
 }   
 .vp-container {
     position: relative;

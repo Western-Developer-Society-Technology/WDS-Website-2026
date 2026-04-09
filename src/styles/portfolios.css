@@ -238,7 +238,7 @@
     position: absolute;
     width: 170px;
     height: auto;
-    top: 64%;
+    top: 58%;
     left: 32%;
 }
 .director-title p{
@@ -369,6 +369,22 @@
     transform: translateX(-50%);
     font-family: 'Bellefair';
     font-size: 3rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.tap{
+    display:none;
+}
+.hover{
+    position: absolute;
+    justify-content: center;
+    top: 9vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 1rem;
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
@@ -705,6 +721,22 @@
     color: #ffffff;
     z-index: 10;
 }
+.tap{
+    display:none;
+}
+.hover{
+    position: absolute;
+    justify-content: center;
+    top: 10vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
 .neon-circle {
     position: absolute;
     width: 160px;
@@ -1006,7 +1038,7 @@
     z-index: 1;
 }   
 }
-@media (min-width: 1660px){
+@media (min-width: 1536px){
 
 .purpleplanet {
     position: absolute;
@@ -1031,10 +1063,26 @@
     color: #ffffff;
     z-index: 10;
 }
+.tap{
+    display:none;
+}
+.hover{
+   position: absolute;
+    justify-content: center;
+    top: 13vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10; 
+}
 .neon-circle {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: rgb(166, 166, 166);
     border: 1.5px solid rgba(250, 252, 255, 1);
@@ -1059,19 +1107,37 @@
 }
 .neon-circle p{
     font-family: 'Bellefair';
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 /* Circle positions — adjust percentages to match your design */
-.neon-circle4 { top: 50%; left: 50%; }        /* INTERNALS — center */
-.neon-circle1 { top: 25%; left: 38%; }         /* DEVELOPMENT — top left */
-.neon-circle2 { top: 52%; left: 29%; }         /* TECHNOLOGY — mid left */
-.neon-circle3 { top: 78%; left: 38%; }         /* FINANCE — bottom left */
-.neon-circle5 { top: 78%; left: 62%; }         /* MARKETING — bottom right */
-.neon-circle6 { top: 52%; left: 72%; }         /* CAREERS — mid right */
-.neon-circle7 { top: 25%; left: 60%; }         /* EXTERNALS — top right */
+.neon-circle4 { top: 60%; left: 50%; }        /* INTERNALS — center */
+.neon-circle1 { top: 35%; left: 38%; }         /* DEVELOPMENT — top left */
+.neon-circle2 { top: 60%; left: 29%; }         /* TECHNOLOGY — mid left */
+.neon-circle3 { top: 84%; left: 38%; }         /* FINANCE — bottom left */
+.neon-circle5 { top: 84%; left: 62%; }         /* MARKETING — bottom right */
+.neon-circle6 { top: 60%; left: 72%; }         /* CAREERS — mid right */
+.neon-circle7 { top: 35%; left: 60%; }         /* EXTERNALS — top right */
 
 .neon-line{
+    display:none;
+}
+.neon-line1{
+    display:none;
+}
+.neon-line2{
+    display:none;
+}
+.neon-line3{
+    display:none;
+}
+.neon-line4{
+    display:none;
+}
+.neon-line5{
+    display:none;
+}
+.neon-line6{
     position: absolute;
     top: 0;
     left: 0;
@@ -1081,7 +1147,7 @@
     pointer-events: none;
 }
 
-.connector{
+.connector6{
     stroke: rgba(255, 255, 255, 0.7);
     stroke-width: 1.5;
     z-index: 1;
@@ -1092,15 +1158,15 @@
     display: none;
     margin-top: 4px;
     font-family: 'Bellefair';
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     font-weight: 300;
     color: rgba(5, 5, 5, 0.85);
     line-height: 1.4;
 }
 /* Hover state — circle expands into rounded rectangle */
 .neon-circle:hover {
-    width: 500px;
-    height: 500px;
+    width: 220px;
+    height: 220px;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
     border-color: rgba(251, 253, 255, 0.9);
@@ -1130,12 +1196,12 @@
 .main-title2 {
     position: absolute;
     justify-content: center;
-    top: 1vh; 
+    top: 15vh; 
     left: 50%;
     white-space: nowrap;
     transform: translateX(-50%);
     font-family: 'Bellefair';
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
@@ -1143,8 +1209,8 @@
 
 .vp-title p{
     position: absolute;
-    top: 6vh; 
-    left: 30%;
+    top: 20vh; 
+    left: 27%;
     white-space: nowrap;
     transform: translateX(-50%);
     font-family: 'Bellefair';
@@ -1155,29 +1221,29 @@
 }
 .vertical{
     position: absolute;
-    height: 950px;
+    height: 980px;
     top: 15%; 
-    left: 30%;
+    left: 27%;
     border: 1px solid #FFFFFF;
 }
 .may-june{
-    width: 400px;
+    width: 350px;
     height: auto;
     position: absolute;
     top: 15%;
-    left: 15%;
+    left: 4%;
 }
 .ellipse{
     position: absolute;
     top: -6%;
-    left: 14.4%;
+    left: -2.2%;
     height: 900px;
     width: 900px;
 }
 .ellipse1{
     position: absolute;
     top: 12%;
-    left: 14.4%;
+    left: -2.2%;
     height: 900px;
     width: 900px;
 }
@@ -1186,33 +1252,33 @@
     width: 350px;
     height: auto;
     top: 22%;
-    left: 32%;
+    left: 29%;
 }
 .june-july{
-    width: 390px;
+    width: 350px;
     height: auto;
     position: absolute;
     top: 33%;
-    left: 30.5%;
+    left: 27%;
 }
 .interview{
     position: absolute;
     width: 350px;
     height: auto;
     top: 41%;
-    left: 18%;
+    left: 5%;
 }
 .july{
-    width: 390px;
+    width: 350px;
     height: auto;
     position: absolute;
     top: 53%;
-    left: 16%;
+    left: 4%;
 }
 .ellipse2{
     position: absolute;
     top: 32%;
-    left: 14.4%;
+    left: -2.2%;
     height: 900px;
     width: 900px;
 }
@@ -1221,11 +1287,11 @@
     width: 350px;
     height: auto;
     top: 58%;
-    left: 32%;
+    left: 29%;
 }
 .director-title p{
     position: absolute;
-    top: 5vh; 
+    top: 20vh; 
     left: 70%;
     white-space: nowrap;
     transform: translateX(-50%);
@@ -1243,16 +1309,16 @@
     border: 1px solid #FFFFFF;
 }
 .may-june2{
-    width: 390px;
+    width: 350px;
     height: auto;
     position: absolute;
     top: 15%;
-    left: 55%;
+    left: 47%;
 }
 .ellipse3{
     position: absolute;
     top: -6%;
-    left: 54.4%;
+    left: 40.8%;
     height: 900px;
     width: 900px;
 }
@@ -1265,7 +1331,7 @@
     z-index:2;
 }
 .june-july2{
-    width: 390px;
+    width: 350px;
     height: auto;
     position: absolute;
     top: 35%;
@@ -1273,29 +1339,29 @@
 }
 .ellipse4{
     position: absolute;
-    top: 38%;
-    left: 69.7%;
+    top: 37%;
+    left: 69.4%;
     height: 18px;
     width: 18px;
 }
 .july2{
-    width: 390px;
+    width: 350px;
     height: auto;
     position: absolute;
     top: 53%;
-    left: 55%;
+    left: 47%;
 }
 .interview2{
     position: absolute;
     width: 350px;
     height: auto;
     top: 41%;
-    left: 57%;
+    left: 49%;
 }
 .ellipse5{
     position: absolute;
     top: 55%;
-    left: 69.7%;
+    left: 69.4%;
     height: 18px;
     width: 18px;
 }
@@ -1333,7 +1399,7 @@
 .vp-container {
     position: relative;
     width: 100vw;
-    min-height: 100vh;
+    min-height: 200vh;
     z-index:0;
 }
 }
@@ -1360,6 +1426,9 @@
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
+}
+.tap{
+    display:none;
 }
 .neon-circle {
     position: absolute;
@@ -1692,6 +1761,22 @@
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
+}
+.tap{
+    position: absolute;
+    justify-content: center;
+    top: 8vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
+.hover{
+    display:none;
 }
 /* Container holding all circles — use absolute positioning */
 
@@ -2026,6 +2111,22 @@
     color: #ffffff;
     z-index: 10;
 }
+.hover{
+    display:none;
+}
+.tap{
+    position: absolute;
+    justify-content: center;
+    top: 7.5vh; 
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Bellefair';
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 10;
+}
 
 .neon-circle {
     position: absolute;
@@ -2329,17 +2430,15 @@
     will-change: transform;
 }
 .rings{
-    display:none;
-    /*
     position: absolute;
     width: 500px;
     height: 500px;
     top: -23%;
-    left: 0%;
+    left: -2%;
     filter: blur(1px);
     z-index: 1;
     will-change: transform;
-     */
+     
 }
 }
 @media(max-width: 425px){
@@ -2365,6 +2464,9 @@
     font-weight: 500;
     color: #ffffff;
     z-index: 10;
+}
+.hover{
+    display:none;
 }
 
 .neon-circle {
@@ -2685,6 +2787,9 @@
     position: relative;
     width: 100vw;
     min-height: 50vh;
+}
+.hover{
+    display: none;
 }
 .main-title2 {
     position: absolute;
